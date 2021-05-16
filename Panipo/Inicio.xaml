@@ -1,0 +1,33 @@
+﻿<Page
+    x:Class="Panipo.Inicio"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Panipo"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <Grid Background="White">
+            <Image Source="imagenes/marcaCorporativa.PNG" Width="500" HorizontalAlignment="Center" Margin="0,37,0,520"/>
+            <StackPanel HorizontalAlignment="Left" Width="995" Height="280" Margin="221,480,0,0" VerticalAlignment="Top">
+                <TextBlock  Foreground="Black" FontFamily="Verdana" FontStyle="Normal" FontSize="20" Text=""></TextBlock>
+                <TextBlock Foreground="Black" FontFamily="Verdana" FontStyle="Normal" FontSize="20" Text=" En la panadería Panipo apostamos por el desarrollo y la innovación en nuestros productos."></TextBlock>
+                <TextBlock Foreground="Black" FontFamily="Verdana" FontStyle="Normal" FontSize="20" Text=" De nuestro pan destacamos el uso de diferentes harinas para adaptarnos al gusto del consumidor  "></TextBlock>
+                <TextBlock Foreground="Black" FontFamily="Verdana" FontStyle="Normal" FontSize="20" Text=" además del no uso de productos químicos ya que nuestro objetivo es ser lo más tradicionales "></TextBlock>
+                <TextBlock Foreground="Black" FontFamily="Verdana" FontStyle="Normal" FontSize="20" Text=" posible.En nuestro establecimiento ofrecemos un cercano y familiar y para aquellos que no  "></TextBlock>
+                <TextBlock Foreground="Black" FontFamily="Verdana" FontStyle="Normal" FontSize="20" Text=" puedan acercarse al establecimiento disponemos de un servicio a domicilio para que en toda "></TextBlock>
+                <TextBlock Foreground="Black" FontFamily="Verdana" FontStyle="Normal" FontSize="20" Text=" mesa nunca falte el pan.  "></TextBlock>
+                <TextBlock  Foreground="Black" FontFamily="Verdana" FontStyle="Normal" FontSize="20" Text=""></TextBlock>
+                <TextBlock Foreground="Black" FontFamily="Verdana" FontStyle="Normal" FontSize="20" Text="Número de teléfono: 92635895"></TextBlock>
+                <TextBlock  Foreground="Black" FontFamily="Verdana" FontStyle="Normal" FontSize="20" Text=""></TextBlock>
+                <TextBlock Foreground="Black" FontFamily="Verdana" FontStyle="Normal" FontSize="20" Text="Correo electrónico: panipo@tupandeconfianza.com"></TextBlock>
+            </StackPanel>
+            <Image  Source="imagenes/perfilMj.png" Height="200" Width="200" Margin="221,765,1079,35"></Image>
+            <Image  Source="imagenes/perfilJosu.jpg" Height="200" Width="200" Margin="1092,765,208,35"></Image>
+
+        </Grid>
+
+    </Grid>
+</Page>
