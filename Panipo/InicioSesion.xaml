@@ -18,7 +18,7 @@
                 <PasswordBox Header="Contraseña" PlaceholderText="Enter your password" PasswordChar="#" Height="Auto" HorizontalAlignment="Stretch" Width="420" />
                 <Button Style="{StaticResource ButtonRevealStyle}" Content="Aceptar" HorizontalAlignment="Right" Margin="0,50,85,0" />
             </StackPanel>
-            <Image  Source="imagenes/panaderia.jpg" HorizontalAlignment="Left" Margin="590,0,0,0" VerticalAlignment="Center"/>
+            <Image  Source="imagenes/panaderia.jpg" HorizontalAlignment="Left" Margin="519,0,0,0" VerticalAlignment="Center"/>
         </Grid>
 
     </Grid>
