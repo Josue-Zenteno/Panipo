@@ -1,5 +1,5 @@
 ﻿<Page
-    x:Class="Panipo.InicioSesionxaml"
+    x:Class="Panipo.InicioSesion"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:Panipo"
@@ -9,16 +9,19 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid Background="White">
+        <Grid Height="48" VerticalAlignment="Top" Background="#FF534D4D"></Grid>
         <Grid VerticalAlignment="Top" Background="#FF534D4D" Width="Auto"/>
-        <Grid Height="500" Margin="286,250,320,250" RenderTransformOrigin="0.41,0.463">
+        <Grid Margin="258,193,257,193" RenderTransformOrigin="0.41,0.463">
 
-            <StackPanel Background="#7B6079" Margin="0,0,431,0" Width="Auto" Height="Auto">
+            <StackPanel Background="#7B6079" Margin="0,0,431,0">
 
-                <TextBox Margin="20,170,20,20" Foreground="Black" Header="Nombre usuario" PlaceholderText="Enter your nombre usuario" Height="Auto" />
-                <PasswordBox Header="Contraseña" PlaceholderText="Enter your password" PasswordChar="#" Height="Auto" HorizontalAlignment="Stretch" Width="420" />
-                <Button Style="{StaticResource ButtonRevealStyle}" Content="Aceptar" HorizontalAlignment="Right" Margin="0,50,85,0" />
+                <TextBlock Text="Bienvenido a Panipo" TextWrapping="Wrap" FontSize="30" FontFamily="Verdana" FontWeight="Bold" HorizontalAlignment="Center" Margin="20,30,20,20"/>
+
+                <TextBox Margin="50,100,50,30" Foreground="Black" Header="Nombre usuario" PlaceholderText="Enter your nombre usuario" Height="Auto" FontSize="16" FontFamily="Verdana" />
+                <PasswordBox Header="Contraseña" PlaceholderText="Enter your password" PasswordChar="#" Height="Auto" HorizontalAlignment="Stretch" Width="452" Margin="50,30,50,30" FontSize="16" FontFamily="Verdana" />
+                <Button Style="{StaticResource ButtonRevealStyle}" Content="Aceptar" HorizontalAlignment="Right" Margin="0,50,50,0" FontSize="20" FontFamily="Verdana" />
             </StackPanel>
-            <Image  Source="imagenes/panaderia.jpg" HorizontalAlignment="Left" Margin="519,0,0,0" VerticalAlignment="Center"/>
+            <Image  Source="imagenes/panaderia.jpg" HorizontalAlignment="Left" Margin="559,0,0,0" VerticalAlignment="Center" Width="416"/>
         </Grid>
 
     </Grid>

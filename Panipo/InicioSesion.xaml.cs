@@ -20,9 +20,9 @@ namespace Panipo
     /// <summary>
     /// Una página vacía que se puede usar de forma independiente o a la que se puede navegar dentro de un objeto Frame.
     /// </summary>
-    public sealed partial class InicioSesionxaml : Page
+    public sealed partial class InicioSesion : Page
     {
-        public InicioSesionxaml()
+        public InicioSesion()
         {
             this.InitializeComponent();
         }

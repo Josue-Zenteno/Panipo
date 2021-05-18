@@ -10,8 +10,13 @@
 
     <Grid>
         <Grid Background="White">
-            <Image Source="imagenes/marcaCorporativa.PNG" Width="500" HorizontalAlignment="Center" Margin="0,37,0,520"/>
-            <StackPanel HorizontalAlignment="Left" Width="995" Height="280" Margin="221,480,0,0" VerticalAlignment="Top">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="31*"/>
+                <RowDefinition Height="19*"/>
+            </Grid.RowDefinitions>
+            <Grid Height="48" VerticalAlignment="Top" Background="#FF534D4D"></Grid>
+            <Image Source="imagenes/marcaCorporativa.PNG" Margin="469,62,0,115" HorizontalAlignment="Left" Width="500"/>
+            <StackPanel HorizontalAlignment="Right" Width="995" Margin="0,0,284,240" Height="280" VerticalAlignment="Bottom" Grid.RowSpan="2">
                 <TextBlock  Foreground="Black" FontFamily="Verdana" FontStyle="Normal" FontSize="20" Text=""></TextBlock>
                 <TextBlock Foreground="Black" FontFamily="Verdana" FontStyle="Normal" FontSize="20" Text=" En la panadería Panipo apostamos por el desarrollo y la innovación en nuestros productos."></TextBlock>
                 <TextBlock Foreground="Black" FontFamily="Verdana" FontStyle="Normal" FontSize="20" Text=" De nuestro pan destacamos el uso de diferentes harinas para adaptarnos al gusto del consumidor  "></TextBlock>
@@ -24,8 +29,8 @@
                 <TextBlock  Foreground="Black" FontFamily="Verdana" FontStyle="Normal" FontSize="20" Text=""></TextBlock>
                 <TextBlock Foreground="Black" FontFamily="Verdana" FontStyle="Normal" FontSize="20" Text="Correo electrónico: panipo@tupandeconfianza.com"></TextBlock>
             </StackPanel>
-            <Image  Source="imagenes/perfilMj.png" Height="200" Width="200" Margin="221,765,1079,35"></Image>
-            <Image  Source="imagenes/perfilJosu.jpg" Height="200" Width="200" Margin="1092,765,208,35"></Image>
+            <Image  Source="imagenes/perfilMj.png" Height="200" Width="200" Margin="221,145,1079,35" Grid.Row="1"></Image>
+            <Image  Source="imagenes/perfilJosu.jpg" Height="200" Width="200" Margin="1092,145,208,35" Grid.Row="1"></Image>
 
         </Grid>
 
