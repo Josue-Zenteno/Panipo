@@ -80,5 +80,13 @@ namespace Panipo
             ContentFrame.Navigate(typeof(InicioSesion));
             inicio.IsChecked = true;
         }
+
+        private void carritoCompra(object sender, RoutedEventArgs e)
+        {
+            ContentFrame.Navigate(typeof(CarritoCompra));
+            inicio.IsChecked = true;
+        }
+
+       
     }
 }
