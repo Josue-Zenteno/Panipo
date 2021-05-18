@@ -6,7 +6,7 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" HorizontalAlignment="Center">
 
     <Page.Resources>
         <SolidColorBrush x:Key="NavButtonPressedBackgroundBrush" Color="White" Opacity="0.3" />
@@ -85,7 +85,11 @@
         </Style>
     </Page.Resources>
     <Grid Background="White">
-        <Grid Height="48" VerticalAlignment="Top" Background="#FF534D4D"></Grid>
+        <Grid Height="48" VerticalAlignment="Top" Background="#FF534D4D">
+            <SymbolIcon Symbol="Contact" Margin="0,5,100,10"
+                       HorizontalAlignment="Right"></SymbolIcon>
+            <TextBlock Text="nombre" Foreground="White" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,85,2"></TextBlock>
+        </Grid>
         <SplitView x:Name="sView" IsPaneOpen="True" PanePlacement="Left" OpenPaneLength="250" CompactPaneLength="48" DisplayMode="CompactInline" >
             <SplitView.Pane>
                 <Grid >
@@ -115,7 +119,7 @@
                 </Grid>
             </SplitView.Pane>
             <SplitView.Content>
-                <Frame x:Name="ContentFrame"/>
+                <Frame x:Name="ContentFrame" Margin="0,0,100,0"/>
             </SplitView.Content>
         </SplitView>
 
