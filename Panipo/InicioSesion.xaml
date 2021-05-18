@@ -9,12 +9,8 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid Background="White">
-        <Grid Height="48" VerticalAlignment="Top" Background="#FF534D4D"></Grid>
-        <Grid Height="48" VerticalAlignment="Top" Background="#FF534D4D">
-            <SymbolIcon Symbol="Contact" Margin="0,5,100,10"
-                       HorizontalAlignment="Right"></SymbolIcon>
-            <TextBlock Text="nombre" Foreground="White" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,85,2"></TextBlock>
-        </Grid>
+       
+       
         <Grid Margin="258,193,257,193" RenderTransformOrigin="0.41,0.463">
 
             <StackPanel Background="#7B6079" Margin="0,0,431,0">

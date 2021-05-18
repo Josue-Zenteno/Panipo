@@ -98,15 +98,15 @@
                         <StackPanel.Background>
                             <ImageBrush ImageSource="/imagenes/fondomenu.png" Stretch="UniformToFill"/>
                         </StackPanel.Background>
-                        
-                        
+
+
                         <RadioButton  x:Name="HamburguerButton" Style="{StaticResource HamburguerRadioButtonStyle}" Content="" Foreground="Black" GroupName="HamburguerButton" Tag="" Background="#FF534D4D" Click="splitView"/>
 
                         <AutoSuggestBox PlaceholderText="Type a control name"
                             
                             QueryIcon="Find"
                             
-                            Margin="20"/>  
+                            Margin="20"/>
 
                         <RadioButton x:Name="inicio" Style="{StaticResource HamburguerRadioButtonStyle}" Content="Inicio" Foreground="Black" GroupName="gp1" Tag="" Click="inicioClick"/>
                         <RadioButton Style="{StaticResource HamburguerRadioButtonStyle}" Content="Panes" Foreground="Black" GroupName="gp1" Tag=""/>
@@ -119,7 +119,7 @@
                 </Grid>
             </SplitView.Pane>
             <SplitView.Content>
-                <Frame x:Name="ContentFrame" Margin="0,0,100,0"/>
+                <Frame x:Name="ContentFrame" HorizontalAlignment="Left" Width="1246" Height="952" VerticalAlignment="Top" Margin="0,48,0,0"/>
             </SplitView.Content>
         </SplitView>
 

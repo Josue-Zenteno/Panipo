@@ -14,11 +14,7 @@
                 <RowDefinition Height="31*"/>
                 <RowDefinition Height="19*"/>
             </Grid.RowDefinitions>
-            <Grid Height="48" VerticalAlignment="Top" Background="#FF534D4D">
-                <SymbolIcon Symbol="Contact" Margin="0,5,100,10"
-                       HorizontalAlignment="Right"></SymbolIcon>
-                <TextBlock Text="nombre" Foreground="White" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,85,2"></TextBlock>
-            </Grid>
+           
             <Image Source="imagenes/marcaCorporativa.PNG" Margin="469,62,0,115" HorizontalAlignment="Left" Width="500"/>
             <StackPanel HorizontalAlignment="Right" Width="995" Margin="0,0,284,240" Height="280" VerticalAlignment="Bottom" Grid.RowSpan="2">
                 <TextBlock  Foreground="Black" FontFamily="Verdana" FontStyle="Normal" FontSize="20" Text=""></TextBlock>

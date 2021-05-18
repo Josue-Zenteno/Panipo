@@ -77,7 +77,7 @@ namespace Panipo
 
         private void inicioSesionClick(object sender, RoutedEventArgs e)
         {
-            ContentFrame.Navigate(typeof(InicioSesionxaml));
+            ContentFrame.Navigate(typeof(InicioSesion));
             inicio.IsChecked = true;
         }
     }
