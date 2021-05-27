@@ -109,7 +109,7 @@
                             Margin="20"/>
 
                         <RadioButton x:Name="inicio" Margin="10" Style="{StaticResource HamburguerRadioButtonStyle}" Content="Inicio" Foreground="Black" GroupName="gp1" Tag="" Click="inicioClick"/>
-                        <RadioButton Margin="10" Style="{StaticResource HamburguerRadioButtonStyle}" Content="Panes" Foreground="Black" GroupName="gp1" Tag=""  ToolTipService.ToolTip="Catalogo de panes"/>
+                        <RadioButton x:Name="ventanaPanes" Margin="10" Style="{StaticResource HamburguerRadioButtonStyle}" Content="Panes" Foreground="Black" GroupName="gp1" Tag=""  ToolTipService.ToolTip="Catalogo de panes" Click="panesClick"/>
                         <RadioButton x:Name="CarritoCompra" Margin="10" Style="{StaticResource HamburguerRadioButtonStyle}" Content="Comprado" Foreground="Black" GroupName="gp1" Tag="" Click="carritoCompra" ToolTipService.ToolTip="Productos en la cesta"/>
                         <RadioButton x:Name="InicioSesion" Margin="10" Style="{StaticResource HamburguerRadioButtonStyle}" Content="Inicio sesión" Foreground="Black" GroupName="gp1" Tag="" Click="inicioSesionClick"/>
                         <RadioButton x:Name="CerrarSesion" Margin="10,560,10,10" Style="{StaticResource HamburguerRadioButtonStyle}" Content="Cerrar sesión" Foreground="Black" GroupName="gp1" Tag="" />

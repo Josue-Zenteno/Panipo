@@ -87,6 +87,12 @@ namespace Panipo
             inicio.IsChecked = true;
         }
 
+        private void panesClick(object sender, RoutedEventArgs e) {
+
+            ContentFrame.Navigate(typeof(Panes));
+            inicio.IsChecked = true;
+
+        }
        
     }
 }
