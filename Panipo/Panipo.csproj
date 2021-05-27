@@ -194,6 +194,7 @@
     <Content Include="imagenes\fondomenu.PNG" />
     <Content Include="imagenes\marcaCorporativa.PNG" />
     <Content Include="imagenes\panaderia.jpg" />
+    <Content Include="imagenes\pan_molde.jpg" />
     <Content Include="imagenes\perfilJosu.jpg" />
     <Content Include="imagenes\perfilMj.png" />
     <Content Include="Properties\Default.rd.xml" />

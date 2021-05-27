@@ -22,8 +22,8 @@ namespace Panipo {
 
             var panes = new List<Pan>();
 
-            panes.Add(new Pan { id_pan = 1, nombre_pan = "Pan de pueblo", 
-                cover_pan = "Assets/StoreLogo.scale-200.png", precio_pan = 3.2 });
+            panes.Add(new Pan { id_pan = 1, nombre_pan = "Pan de molde", 
+                cover_pan = "imagenes/pan_molde.jpg", precio_pan = 3.2 });
             panes.Add(new Pan { id_pan = 2, nombre_pan = "Pan de sésamo", 
                 cover_pan = "Assets/StoreLogo.scale-200.png", precio_pan = 3.2 });
             panes.Add(new Pan { id_pan = 3, nombre_pan = "Pan de cuarto", 
