@@ -87,8 +87,8 @@
     <Grid Background="White">
         <Grid Height="48" VerticalAlignment="Top" Background="#FF534D4D">
             <SymbolIcon Symbol="Contact" Margin="0,5,100,10"
-                       HorizontalAlignment="Right"></SymbolIcon>
-            <TextBlock Text="nombre" Foreground="White" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,85,2"></TextBlock>
+                       HorizontalAlignment="Right"/>
+            <TextBlock Text="nombre" Foreground="White" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,85,2"/>
         </Grid>
         <SplitView x:Name="sView" IsPaneOpen="True" PanePlacement="Left" OpenPaneLength="250" CompactPaneLength="48" DisplayMode="CompactInline" >
             <SplitView.Pane>
@@ -100,7 +100,7 @@
                         </StackPanel.Background>
 
 
-                        <RadioButton  x:Name="HamburguerButton" Style="{StaticResource HamburguerRadioButtonStyle}" Content="" Foreground="Black" GroupName="HamburguerButton" Tag="" Background="#FF534D4D" Click="splitView" ToolTipService.ToolTip="Minimizar/maximizar menú" />
+                        <RadioButton  x:Name="HamburguerButton" Style="{StaticResource HamburguerRadioButtonStyle}" Content="" Foreground="Black" GroupName="HamburguerButton" Tag="&#xE700;" Background="#FF534D4D" Click="splitView" ToolTipService.ToolTip="Minimizar/maximizar menú" />
 
                         <AutoSuggestBox PlaceholderText="Type a control name"
                             
@@ -108,11 +108,11 @@
                             
                             Margin="20"/>
 
-                        <RadioButton x:Name="inicio" Margin="10" Style="{StaticResource HamburguerRadioButtonStyle}" Content="Inicio" Foreground="Black" GroupName="gp1" Tag="" Click="inicioClick"/>
-                        <RadioButton x:Name="ventanaPanes" Margin="10" Style="{StaticResource HamburguerRadioButtonStyle}" Content="Panes" Foreground="Black" GroupName="gp1" Tag=""  ToolTipService.ToolTip="Catalogo de panes" Click="panesClick"/>
-                        <RadioButton x:Name="CarritoCompra" Margin="10" Style="{StaticResource HamburguerRadioButtonStyle}" Content="Comprado" Foreground="Black" GroupName="gp1" Tag="" Click="carritoCompra" ToolTipService.ToolTip="Productos en la cesta"/>
-                        <RadioButton x:Name="InicioSesion" Margin="10" Style="{StaticResource HamburguerRadioButtonStyle}" Content="Inicio sesión" Foreground="Black" GroupName="gp1" Tag="" Click="inicioSesionClick"/>
-                        <RadioButton x:Name="CerrarSesion" Margin="10,560,10,10" Style="{StaticResource HamburguerRadioButtonStyle}" Content="Cerrar sesión" Foreground="Black" GroupName="gp1" Tag="" />
+                        <RadioButton x:Name="inicio" Margin="10" Style="{StaticResource HamburguerRadioButtonStyle}" Content="Inicio" Foreground="Black" GroupName="gp1" Tag="&#xE1C3;" Click="inicioClick"/>
+                        <RadioButton x:Name="ventanaPanes" Margin="10" Style="{StaticResource HamburguerRadioButtonStyle}" Content="Panes" Foreground="Black" GroupName="gp1" Tag="&#xE725;"  ToolTipService.ToolTip="Catalogo de panes" Click="panesClick"/>
+                        <RadioButton x:Name="CarritoCompra" Margin="10" Style="{StaticResource HamburguerRadioButtonStyle}" Content="Comprado" Foreground="Black" GroupName="gp1" Tag="&#xE14D;" Click="carritoCompra" ToolTipService.ToolTip="Productos en la cesta"/>
+                        <RadioButton x:Name="InicioSesion" Margin="10" Style="{StaticResource HamburguerRadioButtonStyle}" Content="Inicio sesión" Foreground="Black" GroupName="gp1" Tag="&#xE13D;" Click="inicioSesionClick"/>
+                        <RadioButton x:Name="CerrarSesion" Margin="10,560,10,10" Style="{StaticResource HamburguerRadioButtonStyle}" Content="Cerrar sesión" Foreground="Black" GroupName="gp1" Tag="&#xE13D;" />
 
 
 
@@ -120,9 +120,7 @@
                     </StackPanel>
                 </Grid>
             </SplitView.Pane>
-            <SplitView.Content>
-                <Frame x:Name="ContentFrame" HorizontalAlignment="Left" Width="1246" Height="952" VerticalAlignment="Top" Margin="0,48,0,0"/>
-            </SplitView.Content>
+            <Frame x:Name="ContentFrame" HorizontalAlignment="Left" Width="1246" Height="952" VerticalAlignment="Top" Margin="0,48,0,0"/>
         </SplitView>
 
     </Grid>

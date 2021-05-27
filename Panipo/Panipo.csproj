@@ -135,6 +135,9 @@
     <Compile Include="Panes.xaml.cs">
       <DependentUpon>Panes.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pedidos.xaml.cs">
+      <DependentUpon>Pedidos.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -223,6 +226,10 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Panes.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pedidos.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
