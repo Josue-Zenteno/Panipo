@@ -30,7 +30,7 @@ namespace Panipo {
         public Pedidos() {
 
             this.InitializeComponent();
-        
+
             //inicializarPedidos();
 
         }
@@ -47,38 +47,60 @@ namespace Panipo {
 
         }
         */
-       
+
         private void btnComprarNoti(object sender, RoutedEventArgs e)
-         {
-            ToastContent toastContent = new ToastContent()
- {
-     Visual = new ToastVisual()
-     {
-         BindingGeneric = new ToastBindingGeneric()
-         {
-             Children = 
-             {
-                 new AdaptiveText()
-                 {
-                     Text = "Compra realizada"
-                 },
-                 new AdaptiveText()
-                 {
-                     Text = "Muchas gracias por confiar en nosotros"
-                 }
-             }
-         }
-     }
- };
+        {
+            var toastContent = new ToastContent()
+            {
+                Visual = new ToastVisual()
+                {
+                    BindingGeneric = new ToastBindingGeneric()
+                    {
+                        Children =
+                        {
+                            new AdaptiveText()
+                            {
+                                Text = "Su compra ha sido realizada."
+                            },
+                            new AdaptiveText()
+                            {
+                                Text = "Su pedido esta en camino..."
+                            },
+                            new AdaptiveImage()
+                            {
+                                Source = "Imagenes/panaderia.jpg"
+                            }
+                        },
+                        AppLogoOverride = new ToastGenericAppLogo()
+                        {
+                            Source = "Imagenes/marcaCorporativa.PNG",
+                            HintCrop = ToastGenericAppLogoCrop.Circle
+                        }
+                    }
+                },
+                Actions = new ToastActionsCustom()
+                {
+                    Buttons =
+                    {
+                        new ToastButton("Aceptar", "Aceptar")
+                        {
+                            ActivationType = ToastActivationType.Background
+                        }
+                    }
+                },
+                Launch = "Imagenes/marcaCorporativa.PNG"
+            };
 
- // Create the toast notification
- var toastNotif = new ToastNotification(toastContent.GetXml());
-
- // And send the notification
- ToastNotificationManager.CreateToastNotifier().Show(toastNotif);
-         }
 
 
+            // Create the toast notification
+            var toastNotif = new ToastNotification(toastContent.GetXml());
+
+            // And send the notification
+            ToastNotificationManager.CreateToastNotifier().Show(toastNotif);
+
+
+        }
     }
 }
 
