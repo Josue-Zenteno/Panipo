@@ -27,6 +27,9 @@ namespace Panipo
             this.InitializeComponent();
         }
 
-      
+        private void aceptarInicio(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

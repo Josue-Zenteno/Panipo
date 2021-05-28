@@ -47,9 +47,10 @@ namespace Panipo {
 
         }
         */
-         private void btnComprar(object sender, PointerRoutedEventArgs e)
+       
+        private void btnComprarNoti(object sender, RoutedEventArgs e)
          {
-           var toastContent = new ToastContent()
+            ToastContent toastContent = new ToastContent()
  {
      Visual = new ToastVisual()
      {
@@ -59,11 +60,11 @@ namespace Panipo {
              {
                  new AdaptiveText()
                  {
-                     Text = "Hello World"
+                     Text = "Compra realizada"
                  },
                  new AdaptiveText()
                  {
-                     Text = "This is a simple toast message"
+                     Text = "Muchas gracias por confiar en nosotros"
                  }
              }
          }
@@ -80,3 +81,4 @@ namespace Panipo {
 
     }
 }
+

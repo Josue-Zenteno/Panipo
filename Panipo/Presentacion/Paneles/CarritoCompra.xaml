@@ -8,7 +8,7 @@
     mc:Ignorable="d" Foreground="Black">
 
     <Page.Resources>
-        
+
         <DataTemplate x:Key="ItemsPedidosTemplate"
                       x:DataType="local:Pan">
             <Grid>
@@ -25,16 +25,23 @@
                         Style="{StaticResource TitleTextBlockStyle}" Foreground="Black"/>
                     <TextBlock Text="{x:Bind precio_pan}"
                         Style="{StaticResource SubtitleTextBlockStyle}" Foreground="Black"/>
-                    <Button x:Name="btnComprar" Click="btnComprar"/>
+                    <Button x:Name="btnComprar" Click="btnComprarNoti"/>
                 </StackPanel>
+
             </Grid>
         </DataTemplate>
     </Page.Resources>
-    
-    <ListView ItemTemplate="{StaticResource ItemsPedidosTemplate}"
-            ItemsSource="{x:Bind lista_panes}" />
 
-   
+    <Grid>
+        <ListView ItemTemplate="{StaticResource ItemsPedidosTemplate}"
+            ItemsSource="{x:Bind lista_panes}" Margin="0,0,0,153" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        <Button x:Name="btnComprar" Content="Pagar"  Click="btnComprarNoti"  VerticalAlignment="Top" Width="1480" Height="100" Margin="15,852,10,0" FontSize="50" FontFamily="Verdana" HorizontalAlignment="Right"/>
+    </Grid>
+
+
+
+
+
 </Page>
 
 
