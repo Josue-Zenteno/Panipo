@@ -21,7 +21,7 @@
                 <PasswordBox Header="Contraseña" PlaceholderText="Enter your password" PasswordChar="#" Height="Auto" HorizontalAlignment="Stretch" Width="452" Margin="50,30,50,30" FontSize="16" FontFamily="Verdana" />
                 <Button Style="{StaticResource ButtonRevealStyle}" Content="Aceptar" HorizontalAlignment="Right" Margin="0,50,50,0" FontSize="20" FontFamily="Verdana" />
             </StackPanel>
-            <Image  Source="imagenes/panaderia.jpg" HorizontalAlignment="Left" Margin="559,0,0,0" VerticalAlignment="Center" Width="416"/>
+            <Image  Source="/Imagenes/panaderia.jpg" HorizontalAlignment="Left" Margin="559,0,0,0" VerticalAlignment="Center" Width="416"/>
         </Grid>
 
     </Grid>

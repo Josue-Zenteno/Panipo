@@ -6,7 +6,7 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" HorizontalAlignment="Center">
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" HorizontalAlignment="Stretch">
 
     <Page.Resources>
         <SolidColorBrush x:Key="NavButtonPressedBackgroundBrush" Color="White" Opacity="0.3" />
@@ -96,7 +96,7 @@
 
                     <StackPanel>
                         <StackPanel.Background>
-                            <ImageBrush ImageSource="/imagenes/fondomenu.png" Stretch="UniformToFill"/>
+                            <ImageBrush ImageSource="/Imagenes/fondomenu.png" Stretch="UniformToFill"/>
                         </StackPanel.Background>
 
 

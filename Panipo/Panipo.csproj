@@ -119,24 +119,21 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="CarritoCompra.xaml.cs">
-      <DependentUpon>CarritoCompra.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Inicio.xaml.cs">
+    <Compile Include="Presentacion\Paneles\Inicio.xaml.cs">
       <DependentUpon>Inicio.xaml</DependentUpon>
     </Compile>
-    <Compile Include="InicioSesion.xaml.cs">
+    <Compile Include="Presentacion\Paneles\InicioSesion.xaml.cs">
       <DependentUpon>InicioSesion.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pan.cs" />
-    <Compile Include="Panes.xaml.cs">
+    <Compile Include="Dominio\Pan.cs" />
+    <Compile Include="Presentacion\Paneles\Panes.xaml.cs">
       <DependentUpon>Panes.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pedidos.xaml.cs">
-      <DependentUpon>Pedidos.xaml</DependentUpon>
+    <Compile Include="Presentacion\Paneles\CarritoCompra.xaml.cs">
+      <DependentUpon>CarritoCompra.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -191,12 +188,12 @@
     <Content Include="Assets\Wide310x150Logo.scale-125.png" />
     <Content Include="Assets\Wide310x150Logo.scale-150.png" />
     <Content Include="Assets\Wide310x150Logo.scale-400.png" />
-    <Content Include="imagenes\fondomenu.PNG" />
-    <Content Include="imagenes\marcaCorporativa.PNG" />
-    <Content Include="imagenes\panaderia.jpg" />
-    <Content Include="imagenes\pan_molde.jpg" />
-    <Content Include="imagenes\perfilJosu.jpg" />
-    <Content Include="imagenes\perfilMj.png" />
+    <Content Include="Imagenes\fondomenu.PNG" />
+    <Content Include="Imagenes\marcaCorporativa.PNG" />
+    <Content Include="Imagenes\panaderia.jpg" />
+    <Content Include="Imagenes\pan_molde.jpg" />
+    <Content Include="Imagenes\perfilJosu.jpg" />
+    <Content Include="Imagenes\perfilMj.png" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
@@ -210,15 +207,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="CarritoCompra.xaml">
+    <Page Include="Presentacion\Paneles\Inicio.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Inicio.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="InicioSesion.xaml">
+    <Page Include="Presentacion\Paneles\InicioSesion.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -226,11 +219,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Panes.xaml">
+    <Page Include="Presentacion\Paneles\Panes.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pedidos.xaml">
+    <Page Include="Presentacion\Paneles\CarritoCompra.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -239,6 +232,10 @@
     <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
       <Version>6.2.10</Version>
     </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Persistencia\" />
+    <Folder Include="Presentacion\Componentes\" />
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
