@@ -25,6 +25,7 @@
                         Style="{StaticResource TitleTextBlockStyle}" Foreground="Black"/>
                     <TextBlock Text="{x:Bind precio_pan}"
                         Style="{StaticResource SubtitleTextBlockStyle}" Foreground="Black"/>
+                    <Button x:Name="btnComprar" Click="btnComprar"/>
                 </StackPanel>
             </Grid>
         </DataTemplate>

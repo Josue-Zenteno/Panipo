@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using Windows.ApplicationModel.Activation;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
@@ -12,6 +13,8 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using Microsoft.Toolkit.Uwp.Notifications;
+using Windows.UI.Notifications;
 
 // La plantilla de elemento Página en blanco está documentada en https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -44,5 +47,36 @@ namespace Panipo {
 
         }
         */
+         private void btnComprar(object sender, PointerRoutedEventArgs e)
+         {
+           var toastContent = new ToastContent()
+ {
+     Visual = new ToastVisual()
+     {
+         BindingGeneric = new ToastBindingGeneric()
+         {
+             Children = 
+             {
+                 new AdaptiveText()
+                 {
+                     Text = "Hello World"
+                 },
+                 new AdaptiveText()
+                 {
+                     Text = "This is a simple toast message"
+                 }
+             }
+         }
+     }
+ };
+
+ // Create the toast notification
+ var toastNotif = new ToastNotification(toastContent.GetXml());
+
+ // And send the notification
+ ToastNotificationManager.CreateToastNotifier().Show(toastNotif);
+         }
+
+
     }
 }
