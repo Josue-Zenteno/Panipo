@@ -8,119 +8,93 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" HorizontalAlignment="Stretch">
 
-    <Page.Resources>
-        <SolidColorBrush x:Key="NavButtonPressedBackgroundBrush" Color="White" Opacity="0.3" />
-        <SolidColorBrush x:Key="NavButtonCheckedBackgroundBrush" Color="White" Opacity="0.2" />
-        <SolidColorBrush x:Key="NavButtonHoverBackgroundBrush" Color="White" Opacity="0.1" />
-
-        <Style x:Key="HamburguerRadioButtonStyle" TargetType="RadioButton">
-            <Setter Property="Background" Value="Transparent"/>
-            <Setter Property="Padding" Value="3"/>
-            <Setter Property="HorizontalAlignment" Value="Stretch"/>
-            <Setter Property="VerticalAlignment" Value="Center"/>
-            <Setter Property="HorizontalContentAlignment" Value="Left"/>
-            <Setter Property="VerticalContentAlignment" Value="Center"/>
-            <Setter Property="Template">
-                <Setter.Value>
-                    <ControlTemplate TargetType="RadioButton">
-                        <Border BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}">
-                            <VisualStateManager.VisualStateGroups>
-                                <VisualStateGroup x:Name="CommonStates">
-                                    <VisualState x:Name="Normal"/>
-                                    <VisualState x:Name="PointerOver">
-                                        <Storyboard>
-                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Background" Storyboard.TargetName="BackgroundGrid">
-                                                <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource NavButtonHoverBackgroundBrush}"/>
-                                            </ObjectAnimationUsingKeyFrames>
-                                        </Storyboard>
-                                    </VisualState>
-                                    <VisualState x:Name="Pressed">
-                                        <Storyboard>
-                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Background" Storyboard.TargetName="BackgroundGrid">
-                                                <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource NavButtonPressedBackgroundBrush}"/>
-                                            </ObjectAnimationUsingKeyFrames>
-                                        </Storyboard>
-                                    </VisualState>
-                                    <VisualState x:Name="Disabled" />
-                                </VisualStateGroup>
-                                <VisualStateGroup x:Name="CheckStates">
-                                    <VisualState x:Name="Checked">
-                                        <Storyboard>
-                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Background" Storyboard.TargetName="BackgroundGrid">
-                                                <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource NavButtonCheckedBackgroundBrush}"/>
-                                            </ObjectAnimationUsingKeyFrames>
-                                        </Storyboard>
-                                    </VisualState>
-                                    <VisualState x:Name="Unchecked"/>
-                                    <VisualState x:Name="Indeterminate"/>
-                                </VisualStateGroup>
-                                <VisualStateGroup x:Name="FocusStates">
-                                    <VisualState x:Name="Focused"/>
-                                    <VisualState x:Name="Unfocused"/>
-                                    <VisualState x:Name="PointerFocused"/>
-                                </VisualStateGroup>
-                            </VisualStateManager.VisualStateGroups>
-                            <Grid Name="BackgroundGrid" Background="Transparent" Margin="0">
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="48"/>
-                                    <ColumnDefinition Width="*"/>
-                                </Grid.ColumnDefinitions>
-                                <TextBlock FontSize="16" Height="16" Text="{TemplateBinding Tag}" FontFamily="Segoe MDL2 Assets" Margin="0,16" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White"/>
-                                <ContentPresenter x:Name="ContentPresenter" 
-                                                  FontSize="16"
-                                                  AutomationProperties.AccessibilityView="Raw" 
-                                                  ContentTemplate="{TemplateBinding ContentTemplate}" 
-                                                  ContentTransitions="{TemplateBinding ContentTransitions}" 
-                                                  Content="{TemplateBinding Content}" Grid.Column="1" 
-                                                  HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" 
-                                                  Margin="{TemplateBinding Padding}" 
-                                                  TextWrapping="Wrap" 
-                                                  VerticalAlignment="{TemplateBinding VerticalContentAlignment}" 
-                                                  Foreground="White" />
-                            </Grid>
-                        </Border>
-                    </ControlTemplate>
-                </Setter.Value>
-            </Setter>
-        </Style>
-    </Page.Resources>
     <Grid Background="White">
         <Grid Height="48" VerticalAlignment="Top" Background="#FF534D4D">
-            <SymbolIcon Symbol="Contact" Margin="0,5,100,10"
-                       HorizontalAlignment="Right"/>
-            <TextBlock Text="nombre" Foreground="White" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,85,2"/>
+
+            <StackPanel Orientation="Horizontal" Background="#FF534D4D" Margin="2,0,0,0" FlowDirection="RightToLeft">
+
+                <Button Margin="20,0,0,0" Background="{x:Null}" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" ToolTipService.ToolTip="Perfil">
+                    <FontIcon Glyph="&#xE77B;" FontFamily="Segoe MDL2 Assets" FontSize="20"/>
+                </Button>
+
+                <Button Margin="20,0,0,0" Background="{x:Null}" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" ToolTipService.ToolTip="Mi Carrito">
+                    <FontIcon Glyph="&#xE7BF;" FontFamily="Segoe MDL2 Assets" FontSize="20"/>
+                </Button>
+
+                <Button  Margin="20,0,0,0" Background="{x:Null}" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Click="Button_Click" ToolTipService.ToolTip="Buscar">
+                    <FontIcon Glyph="&#xE721;" FontFamily="Segoe MDL2 Assets" FontSize="20" Margin="0,0,0,0"/>
+                </Button>
+
+                <SplitView x:Name="svUpperBar" IsPaneOpen="False" PanePlacement="Left" OpenPaneLength="250" CompactPaneLength="0" DisplayMode="CompactInline" Width="250">
+                    <SplitView.Pane>
+                        <TextBox x:Name="txtBusqueda" TextWrapping="Wrap" VerticalContentAlignment="Center" Background="#FF3A3636" LostFocus="Prueba"/>
+                    </SplitView.Pane>
+                </SplitView>
+
+            </StackPanel>
+
         </Grid>
-        <SplitView x:Name="sView" IsPaneOpen="True" PanePlacement="Left" OpenPaneLength="250" CompactPaneLength="48" DisplayMode="CompactInline" >
+
+
+        <RelativePanel>
+            <StackPanel Orientation="Horizontal">
+                <Button x:Name="HamburgerButton" FontFamily="Segoe MDL2 Assets" Content="&#xE700;" FontSize="35" Click="HamburgerButton_Click"/>
+                <TextBlock x:Name="MenuTitle" Text="Inicio" FontSize="25" FontFamily="Verdana" Margin="20,8,0,0" />
+            </StackPanel>
+        </RelativePanel>
+
+        <SplitView x:Name="svMenu" IsPaneOpen="True" PanePlacement="Left" OpenPaneLength="250" CompactPaneLength="55" DisplayMode="CompactInline" Margin="0,48,0,0" >
+            <SplitView.Background>
+                <ImageBrush/>
+            </SplitView.Background>
             <SplitView.Pane>
-                <Grid >
 
-                    <StackPanel>
-                        <StackPanel.Background>
-                            <ImageBrush ImageSource="/Imagenes/fondomenu.png" Stretch="UniformToFill"/>
-                        </StackPanel.Background>
+                <ListBox SelectionMode="Single" x:Name="IconsListBox" SelectionChanged="IconsListBox_SelectionChanged">
 
+                    <ListBox.Background>
+                        <ImageBrush ImageSource="/Imagenes/fondomenu.PNG" Stretch="UniformToFill" Opacity="0.6"/>
+                    </ListBox.Background>
 
-                        <RadioButton  x:Name="HamburguerButton" Style="{StaticResource HamburguerRadioButtonStyle}" Content="" Foreground="Black" GroupName="HamburguerButton" Tag="&#xE700;" Background="#FF534D4D" Click="splitView" ToolTipService.ToolTip="Minimizar/maximizar menú" />
+                    <ListBoxItem x:Name="InicioListBoxItem" ToolTipService.ToolTip="Inicio">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock FontFamily="Segoe MDL2 Assets" FontSize="28" Text="&#xE80F;"  />
+                            <TextBlock Text="Inicio" FontSize="24" Margin="20,0,0,0"  />
+                        </StackPanel>
+                    </ListBoxItem>
 
-                        <AutoSuggestBox PlaceholderText="Type a control name"
-                            
-                            QueryIcon="Find"
-                            
-                            Margin="20"/>
+                    <ListBoxItem x:Name="PanesListBoxItem" ToolTipService.ToolTip="Panes">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock FontFamily="Segoe MDL2 Assets" FontSize="28" Text="&#xEC09;" />
+                            <TextBlock Text="Panes" FontSize="24" Margin="20,0,0,0"  />
+                        </StackPanel>
+                    </ListBoxItem>
 
-                        <RadioButton x:Name="inicio" Margin="10" Style="{StaticResource HamburguerRadioButtonStyle}" Content="Inicio" Foreground="Black" GroupName="gp1" Tag="&#xE1C3;" Click="inicioClick"/>
-                        <RadioButton x:Name="ventanaPanes" Margin="10" Style="{StaticResource HamburguerRadioButtonStyle}" Content="Panes" Foreground="Black" GroupName="gp1" Tag="&#xE725;"  ToolTipService.ToolTip="Catalogo de panes" Click="panesClick"/>
-                        <RadioButton x:Name="CarritoCompra" Margin="10" Style="{StaticResource HamburguerRadioButtonStyle}" Content="Comprado" Foreground="Black" GroupName="gp1" Tag="&#xE14D;" Click="carritoCompra" ToolTipService.ToolTip="Productos en la cesta"/>
-                        <RadioButton x:Name="InicioSesion" Margin="10" Style="{StaticResource HamburguerRadioButtonStyle}" Content="Inicio sesión" Foreground="Black" GroupName="gp1" Tag="&#xE13D;" Click="inicioSesionClick"/>
-                        <RadioButton x:Name="CerrarSesion" Margin="10,560,10,10" Style="{StaticResource HamburguerRadioButtonStyle}" Content="Cerrar sesión" Foreground="Black" GroupName="gp1" Tag="&#xE13D;" />
+                    <ListBoxItem x:Name="PastelesListBoxItem" ToolTipService.ToolTip="Pasteles">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock FontFamily="Segoe MDL2 Assets" FontSize="28" Text="&#xEC09;" />
+                            <TextBlock Text="Pasteles" FontSize="24" Margin="20,0,0,0"  />
+                        </StackPanel>
+                    </ListBoxItem>
 
+                    <ListBoxItem x:Name="BollosListBoxItem" ToolTipService.ToolTip="Bollos">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock FontFamily="Segoe MDL2 Assets" FontSize="28" Text="&#xEC09;" />
+                            <TextBlock Text="Bollos" FontSize="24" Margin="20,0,0,0"  />
+                        </StackPanel>
+                    </ListBoxItem>
 
+                    <ListBoxItem x:Name="AboutUsListBoxItem">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock FontFamily="Segoe MDL2 Assets" FontSize="28" Text="&#xF142;" />
+                            <TextBlock Text="Sobre Nosotros" FontSize="24" Margin="20,0,0,0" ToolTipService.ToolTip="Sobre Nosotros"  />
+                        </StackPanel>
+                    </ListBoxItem>
 
-
-                    </StackPanel>
-                </Grid>
+                </ListBox>
             </SplitView.Pane>
-            <Frame x:Name="ContentFrame" HorizontalAlignment="Left" Width="1246" Height="952" VerticalAlignment="Top" Margin="0,48,0,0"/>
+
+            <Frame x:Name="ContentFrame" HorizontalAlignment="Left" Width="1246" Height="952" VerticalAlignment="Center"/>
+
         </SplitView>
 
     </Grid>

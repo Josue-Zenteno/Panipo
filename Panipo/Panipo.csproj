@@ -189,11 +189,14 @@
     <Content Include="Assets\Wide310x150Logo.scale-150.png" />
     <Content Include="Assets\Wide310x150Logo.scale-400.png" />
     <Content Include="Imagenes\fondomenu.PNG" />
+    <Content Include="Imagenes\lupa.png" />
     <Content Include="Imagenes\marcaCorporativa.PNG" />
     <Content Include="Imagenes\panaderia.jpg" />
     <Content Include="Imagenes\pan_molde.jpg" />
+    <Content Include="Imagenes\perfil.png" />
     <Content Include="Imagenes\perfilJosu.jpg" />
     <Content Include="Imagenes\perfilMj.png" />
+    <Content Include="Imagenes\spicy logo blanco.png" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
