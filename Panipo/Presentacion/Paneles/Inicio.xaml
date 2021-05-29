@@ -5,34 +5,28 @@
     xmlns:local="using:Panipo"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    mc:Ignorable="d">
 
-    <Grid>
-        <Grid Background="White">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="31*"/>
-                <RowDefinition Height="19*"/>
-            </Grid.RowDefinitions>
-           
-            <Image Source="/Imagenes/marcaCorporativa.PNG" Margin="469,62,0,115" HorizontalAlignment="Left" Width="500"/>
-            <StackPanel HorizontalAlignment="Right" Width="995" Margin="0,0,284,240" Height="280" VerticalAlignment="Bottom" Grid.RowSpan="2">
-                <TextBlock  Foreground="Black" FontFamily="Verdana" FontStyle="Normal" FontSize="20" Text=""></TextBlock>
-                <TextBlock Foreground="Black" FontFamily="Verdana" FontStyle="Normal" FontSize="20" Text=" En la panadería Panipo apostamos por el desarrollo y la innovación en nuestros productos."></TextBlock>
-                <TextBlock Foreground="Black" FontFamily="Verdana" FontStyle="Normal" FontSize="20" Text=" De nuestro pan destacamos el uso de diferentes harinas para adaptarnos al gusto del consumidor  "></TextBlock>
-                <TextBlock Foreground="Black" FontFamily="Verdana" FontStyle="Normal" FontSize="20" Text=" además del no uso de productos químicos ya que nuestro objetivo es ser lo más tradicionales "></TextBlock>
-                <TextBlock Foreground="Black" FontFamily="Verdana" FontStyle="Normal" FontSize="20" Text=" posible.En nuestro establecimiento ofrecemos un cercano y familiar y para aquellos que no  "></TextBlock>
-                <TextBlock Foreground="Black" FontFamily="Verdana" FontStyle="Normal" FontSize="20" Text=" puedan acercarse al establecimiento disponemos de un servicio a domicilio para que en toda "></TextBlock>
-                <TextBlock Foreground="Black" FontFamily="Verdana" FontStyle="Normal" FontSize="20" Text=" mesa nunca falte el pan.  "></TextBlock>
-                <TextBlock  Foreground="Black" FontFamily="Verdana" FontStyle="Normal" FontSize="20" Text=""></TextBlock>
-                <TextBlock Foreground="Black" FontFamily="Verdana" FontStyle="Normal" FontSize="20" Text="Número de teléfono: 92635895"></TextBlock>
-                <TextBlock  Foreground="Black" FontFamily="Verdana" FontStyle="Normal" FontSize="20" Text=""></TextBlock>
-                <TextBlock Foreground="Black" FontFamily="Verdana" FontStyle="Normal" FontSize="20" Text="Correo electrónico: panipo@tupandeconfianza.com"></TextBlock>
-            </StackPanel>
-            <Image  Source="/Imagenes/perfilMj.png" Height="200" Width="200" Margin="221,145,1079,35" Grid.Row="1"></Image>
-            <Image  Source="/Imagenes/perfilJosu.jpg" Height="200" Width="200" Margin="1092,145,208,35" Grid.Row="1"></Image>
+    <RelativePanel Background="White">
 
-        </Grid>
+        <Image x:Name="imgLogo" Source="/Imagenes/marcaCorporativa.PNG" Height="300" Margin="50,50,0,0"/>
+        <TextBlock RelativePanel.RightOf="imgLogo" RelativePanel.AlignVerticalCenterWith="imgLogo"
+                   x:Name="lblTituloHomePage" Grid.Column="1"
+                   FontSize="40" Text="Panadería a domicilio y mucho más" TextWrapping="Wrap" Foreground="Black" FontWeight="Bold" Margin="10,25,20,0"/>
 
-    </Grid>
+        <Image x:Name="imgPerfil" RelativePanel.Below="imgLogo" Source="/Imagenes/perfilMj.png" HorizontalAlignment="Stretch" Height="200" Margin="125,150,0,0"/>
+
+        <StackPanel x:Name="spTexto" RelativePanel.Below="lblTituloHomePage" RelativePanel.RightOf="imgLogo" Margin="10,10,0,0">
+            <TextBlock RelativePanel.RightOf="imgLogo" RelativePanel.AlignVerticalCenterWith="imgLogo"
+            x:Name="lblTexto"
+            FontSize="22" Text="Apostamos por el desarrollo y la innovación de nuestros productos" TextWrapping="Wrap" Foreground="Black" FontWeight="Normal"/>
+            <TextBlock RelativePanel.RightOf="imgLogo" RelativePanel.AlignVerticalCenterWith="imgLogo"
+                x:Name="lblTexto1"
+                FontSize="22" Text="Destacamos por la personalización de las harinas al gusto del consumidor " TextWrapping="Wrap" Foreground="Black" FontWeight="Normal"/>
+            <TextBlock RelativePanel.RightOf="imgLogo" RelativePanel.AlignVerticalCenterWith="imgLogo"
+                x:Name="lblTexto2"
+                FontSize="22" TextWrapping="Wrap" Foreground="Black" FontWeight="Normal"><Run Text="Ofrecemos un servivio"/><Run Text=" cercano"/><Run Text=" y familiar para que en "/><Run Text="la"/><Run Text=" mesa nunca falte el pan"/></TextBlock>
+        </StackPanel>
+
+    </RelativePanel>
 </Page>

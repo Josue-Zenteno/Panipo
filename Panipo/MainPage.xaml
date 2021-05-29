@@ -93,7 +93,7 @@
                 </ListBox>
             </SplitView.Pane>
 
-            <Frame x:Name="ContentFrame" HorizontalAlignment="Left" Width="1246" Height="952" VerticalAlignment="Center"/>
+            <Frame x:Name="ContentFrame" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
 
         </SplitView>
 

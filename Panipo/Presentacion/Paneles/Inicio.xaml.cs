@@ -25,6 +25,30 @@ namespace Panipo
         public Inicio()
         {
             this.InitializeComponent();
+            Windows.UI.ViewManagement.ApplicationView.GetForCurrentView().VisibleBoundsChanged += UcRatingText_VisibleBoundsChanged;
+        }
+
+        private void UcRatingText_VisibleBoundsChanged(Windows.UI.ViewManagement.ApplicationView sender, object args)
+        {
+            var Width = Windows.UI.ViewManagement.ApplicationView.GetForCurrentView().VisibleBounds.Width;
+
+            if (Width >= 400)
+            {
+                //RelativePanel.SetBelow(imgPerfil, imgLogo);
+                RelativePanel.SetBelow(lblTexto, lblTituloHomePage);
+                //RelativePanel.SetRightOf(lblTituloHomePage, imgLogo);
+                RelativePanel.SetAlignVerticalCenterWith(lblTituloHomePage, imgLogo);
+                //RelativePanel.SetAlignVerticalCenterWithPanel(imgLogo, true);
+
+            }
+            else
+            {
+                RelativePanel.SetBelow(lblTexto, lblTituloHomePage);
+                //RelativePanel.SetRightOf(lblTituloHomePage, null);
+                //RelativePanel.SetBelow(lblTituloHomePage, imgLogo);
+                //RelativePanel.SetAlignVerticalCenterWith(lblTituloHomePage, null);
+                //RelativePanel.SetAlignVerticalCenterWithPanel(imgLogo, false);
+            }
         }
     }
 }
