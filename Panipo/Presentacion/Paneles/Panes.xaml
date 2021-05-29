@@ -5,10 +5,25 @@
     xmlns:local="using:Panipo"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d" Background="#FFFFF1F1">
+    mc:Ignorable="d" Background="White">
 
+    <Grid Background="White" Margin="30,30,10,0">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="10" />
+        </Grid.RowDefinitions>
 
-    <ListView x:Name="listViewPanes" Background="#FFB3B3B3"/>
-
-
+        <GridView ItemsSource="{x:Bind lista_panes}" IsItemClickEnabled="True" ItemClick="GridView_ItemClick">
+            <GridView.ItemTemplate>
+                <DataTemplate x:DataType="local:Pan">
+                    <StackPanel HorizontalAlignment="Center">
+                        <Image Width="200" Source="{x:Bind cover_pan}" Stretch="UniformToFill" Height="170"/>
+                        <TextBlock FontSize="16" Text="{x:Bind nombre_pan}" Foreground="Black" HorizontalAlignment="Center" />
+                        <TextBlock FontSize="12" Text="{x:Bind precio_pan}" Foreground="Black" HorizontalAlignment="Center" />
+                    </StackPanel>
+                </DataTemplate>
+            </GridView.ItemTemplate>
+        </GridView>
+        <Frame x:Name="c" Content=""/>
+    </Grid>
 </Page>

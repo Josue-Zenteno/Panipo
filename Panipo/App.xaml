@@ -4,4 +4,12 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:Panipo">
 
+    <Application.Resources>
+        <SolidColorBrush x:Key="SystemControlHighlightListAccentLowBrush" Color="#99000000" />
+        <SolidColorBrush x:Key="SystemControlHighlightListAccentMediumBrush" Color="#99000000" />
+        <SolidColorBrush x:Key="TextControlBackgroundFocused" Color="#FF3A3636"/>
+        <SolidColorBrush x:Key="TextControlForegroundFocused" Color="White"/>
+        <SolidColorBrush x:Key="TextControlBorderBrushFocused" Color="White" Opacity="0.2"/>
+    </Application.Resources>
+    
 </Application>

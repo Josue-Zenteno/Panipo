@@ -5,6 +5,7 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -25,74 +26,77 @@ namespace Panipo
         public MainPage()
         {
             this.InitializeComponent();
-
-
-            Windows.UI.ViewManagement.ApplicationView.GetForCurrentView().SetPreferredMinSize(new Size(320, 320));
+            Windows.UI.ViewManagement.ApplicationView.GetForCurrentView().SetPreferredMinSize(new Size(700,1000));
             Windows.UI.ViewManagement.ApplicationView.GetForCurrentView().VisibleBoundsChanged += MainPage_VisibleBoundsChanged;
+            
+            IconsListBox.SelectedIndex = 0;
+            ContentFrame.Navigate(typeof(Inicio));
         }
-        private void MainPage_VisibleBoundsChanged(Windows.UI.ViewManagement.ApplicationView
-       sender, object args)
+
+        private void MainPage_VisibleBoundsChanged(Windows.UI.ViewManagement.ApplicationView sender, object args)
         {
-            var Width =
-           Windows.UI.ViewManagement.ApplicationView.GetForCurrentView().VisibleBounds.Width;
+            var Width = Windows.UI.ViewManagement.ApplicationView.GetForCurrentView().VisibleBounds.Width;
+
             if (Width >= 720)
             {
-                sView.DisplayMode = SplitViewDisplayMode.CompactInline;
-                sView.IsPaneOpen = true;
+                svMenu.DisplayMode = SplitViewDisplayMode.CompactInline;
+                svMenu.IsPaneOpen = true;
             }
             else if (Width >= 360)
             {
-                sView.DisplayMode = SplitViewDisplayMode.CompactOverlay;
-                sView.IsPaneOpen = false;
+                svMenu.DisplayMode = SplitViewDisplayMode.CompactOverlay;
+                svMenu.IsPaneOpen = false;
             }
             else
             {
-                sView.DisplayMode = SplitViewDisplayMode.Overlay;
-                sView.IsPaneOpen = false;
+                svMenu.DisplayMode = SplitViewDisplayMode.Overlay;
+                svMenu.IsPaneOpen = false;
             }
         }
+
+        private void HamburgerButton_Click(object sender, RoutedEventArgs e)
+        {
+            svMenu.IsPaneOpen = !svMenu.IsPaneOpen;
+        }
+
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            sView.IsPaneOpen = !sView.IsPaneOpen;
-        }
-
-        private void splitView(object sender, RoutedEventArgs e)
-        {
-            if (sView.IsPaneOpen)
+            if (svUpperBar.IsPaneOpen == false)
             {
-                sView.IsPaneOpen = false;
+                svUpperBar.IsPaneOpen = true;
+                txtBusqueda.Focus(FocusState.Programmatic);
             }
-            else
-            {
-                sView.IsPaneOpen = true;
+            else {
+                //TODO Buscar Cosas y buscar dandole al Enter porque sino está el bug
             }
-            HamburguerButton.IsChecked = false;
+            
         }
 
-        private void inicioClick(object sender, RoutedEventArgs e)
+        private void IconsListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            ContentFrame.Navigate(typeof(Inicio));
-            inicio.IsChecked = true;
+            if (InicioListBoxItem.IsSelected) {  
+                MenuTitle.Text = "Inicio";
+
+                ContentFrame.Navigate(typeof(Inicio));
+            }
+            else if (PanesListBoxItem.IsSelected) { 
+                MenuTitle.Text = "Panes";
+
+                ContentFrame.Navigate(typeof(Panes));
+            }
+            else if (PastelesListBoxItem.IsSelected) { 
+                MenuTitle.Text = "Pasteles";
+                ContentFrame.Navigate(typeof(Pedidos));
+            }
+            else if (BollosListBoxItem.IsSelected) { 
+                MenuTitle.Text = "Bollos";
+                ContentFrame.Navigate(typeof(InicioSesion));
+            }
         }
 
-        private void inicioSesionClick(object sender, RoutedEventArgs e)
+        private void Prueba(object sender, RoutedEventArgs e)
         {
-            ContentFrame.Navigate(typeof(InicioSesion));
-            inicio.IsChecked = true;
+            svUpperBar.IsPaneOpen = false;
         }
-
-        private void carritoCompra(object sender, RoutedEventArgs e)
-        {
-            ContentFrame.Navigate(typeof(Pedidos));
-            CarritoCompra.IsChecked = true;
-        }
-
-        private void panesClick(object sender, RoutedEventArgs e) {
-
-            ContentFrame.Navigate(typeof(Panes));
-            inicio.IsChecked = true;
-
-        }
-       
     }
 }

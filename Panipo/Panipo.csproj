@@ -119,6 +119,10 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Persistencia\PanManager.cs" />
+    <Compile Include="Presentacion\Paneles\DetallesProducto.xaml.cs">
+      <DependentUpon>DetallesProducto.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Presentacion\Paneles\Inicio.xaml.cs">
       <DependentUpon>Inicio.xaml</DependentUpon>
     </Compile>
@@ -132,8 +136,8 @@
     <Compile Include="Presentacion\Paneles\Panes.xaml.cs">
       <DependentUpon>Panes.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Presentacion\Paneles\CarritoCompra.xaml.cs">
-      <DependentUpon>CarritoCompra.xaml</DependentUpon>
+    <Compile Include="Presentacion\Paneles\Pedidos.xaml.cs">
+      <DependentUpon>Pedidos.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -189,11 +193,16 @@
     <Content Include="Assets\Wide310x150Logo.scale-150.png" />
     <Content Include="Assets\Wide310x150Logo.scale-400.png" />
     <Content Include="Imagenes\fondomenu.PNG" />
+    <Content Include="Imagenes\lupa.png" />
     <Content Include="Imagenes\marcaCorporativa.PNG" />
     <Content Include="Imagenes\panaderia.jpg" />
+    <Content Include="Imagenes\panaderi_inicio_sesion.jpg" />
     <Content Include="Imagenes\pan_molde.jpg" />
+    <Content Include="Imagenes\pan_tostado.jpg" />
+    <Content Include="Imagenes\perfil.png" />
     <Content Include="Imagenes\perfilJosu.jpg" />
     <Content Include="Imagenes\perfilMj.png" />
+    <Content Include="Imagenes\spicy logo blanco.png" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
@@ -207,6 +216,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="Presentacion\Paneles\DetallesProducto.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Presentacion\Paneles\Inicio.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -223,7 +236,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Presentacion\Paneles\CarritoCompra.xaml">
+    <Page Include="Presentacion\Paneles\Pedidos.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -232,9 +245,14 @@
     <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
       <Version>6.2.10</Version>
     </PackageReference>
+    <PackageReference Include="Microsoft.Toolkit.Uwp.Notifications">
+      <Version>7.0.2</Version>
+    </PackageReference>
+    <PackageReference Include="Newtonsoft.Json">
+      <Version>13.0.1</Version>
+    </PackageReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Persistencia\" />
     <Folder Include="Presentacion\Componentes\" />
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
