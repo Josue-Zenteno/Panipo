@@ -6,19 +6,19 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    Background="{StaticResource TextControlForegroundFocused}">
 
-    <RelativePanel Background="#FF2B2B2B">
+    <RelativePanel Background="#FFA87851" Margin="30,30,43,37">
 
         <Image x:Name="imgPanaderia" RelativePanel.RightOf="spInicioSesion" Source="/Imagenes/panaderi_inicio_sesion.jpg" NineGrid="0,0,0,0" Stretch="UniformToFill"/>
 
-        <StackPanel x:Name="spInicioSesion" Background="#FF2B2B2B" Orientation="Vertical">
+        <StackPanel x:Name="spInicioSesion" Background="#FFA87851" Orientation="Vertical">
 
-            <TextBlock x:Name="lblTituloInicioSesion" Text="Bienvenido a Panipo" TextWrapping="Wrap" FontSize="30" FontFamily="Segoe UI" FontWeight="Bold" HorizontalAlignment="Center" Margin="20,50,20,20" Foreground="#FFFAFBFD"/>
+            <TextBlock x:Name="lblTituloInicioSesion" Text="Bienvenido a Panipo" TextWrapping="Wrap" FontSize="40" FontFamily="Verdana" FontWeight="Bold" HorizontalAlignment="Center" Margin="20,50,20,20" Foreground="#FFFAFBFD"/>
 
-            <TextBox x:Name="txtNombreUsuario" Margin="50,100,50,30" Header="Nombre usuario" Foreground="White" PlaceholderText="Introduzca el nombre de usuario" Height="Auto" FontSize="16" FontFamily="Segoe UI" Background="#66FFFFFF" SelectionHighlightColor="White" />
-            <PasswordBox x:Name="txtContrasena" Header="Contraseña" PlaceholderText="Introduzca la contraseña" PasswordChar="#" Height="Auto" HorizontalAlignment="Stretch" Width="450" Margin="50,15,50,30" FontSize="16" FontFamily="Segoe UI" Foreground="Snow" Background="#66FFFFFF" />
-            <Button x:Name="btnAceptar" Style="{StaticResource ButtonRevealStyle}" Content="Aceptar" HorizontalAlignment="Right" Margin="0,30,50,0" FontSize="14" FontFamily="Segoe UI" Background="#FFFAFBFD" FontWeight="Bold" VerticalAlignment="Stretch" Width="150" Foreground="Black" />
+            <TextBox x:Name="txtNombreUsuario" Margin="50,100,50,30" Header="Nombre usuario" Foreground="White" PlaceholderText="Introduzca el nombre de usuario" Height="Auto" FontSize="20" FontFamily="Verdana" Background="#66FFFFFF" SelectionHighlightColor="White" />
+            <PasswordBox x:Name="txtContrasena" Header="Contraseña" PlaceholderText="Introduzca la contraseña" PasswordChar="#" Height="Auto" HorizontalAlignment="Stretch" Width="450" Margin="50,15,50,30" FontSize="20" FontFamily="Verdana" Foreground="Snow" Background="#66FFFFFF" />
+            <Button x:Name="btnAceptar" Style="{StaticResource ButtonRevealStyle}" Content="Aceptar" HorizontalAlignment="Right" Margin="0,30,50,0" FontSize="16" FontFamily="Verdana" Background="#FFFAFBFD" FontWeight="Normal" VerticalAlignment="Stretch" Width="150" Foreground="Black" />
 
         </StackPanel>
     </RelativePanel>

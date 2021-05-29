@@ -91,6 +91,10 @@ namespace Panipo
             else if (BollosListBoxItem.IsSelected) { 
                 MenuTitle.Text = "Bollos";
                 ContentFrame.Navigate(typeof(InicioSesion));
+            }else if (AboutUsListBoxItem.IsSelected)
+            {
+                MenuTitle.Text = "Soobre nosotros";
+                ContentFrame.Navigate(typeof(SobreNosotrosxaml));
             }
         }
 

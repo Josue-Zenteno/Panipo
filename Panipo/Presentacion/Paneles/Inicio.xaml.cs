@@ -32,18 +32,20 @@ namespace Panipo
         {
             var Width = Windows.UI.ViewManagement.ApplicationView.GetForCurrentView().VisibleBounds.Width;
 
-            if (Width >= 400)
+            if (Width >= 360)
             {
                 //RelativePanel.SetBelow(imgPerfil, imgLogo);
                 RelativePanel.SetBelow(lblTexto, lblTituloHomePage);
                 //RelativePanel.SetRightOf(lblTituloHomePage, imgLogo);
                 RelativePanel.SetAlignVerticalCenterWith(lblTituloHomePage, imgLogo);
                 //RelativePanel.SetAlignVerticalCenterWithPanel(imgLogo, true);
+               
 
             }
             else
             {
                 RelativePanel.SetBelow(lblTexto, lblTituloHomePage);
+               // RelativePanel.AlignBottomWithPanelProperty();
                 //RelativePanel.SetRightOf(lblTituloHomePage, null);
                 //RelativePanel.SetBelow(lblTituloHomePage, imgLogo);
                 //RelativePanel.SetAlignVerticalCenterWith(lblTituloHomePage, null);

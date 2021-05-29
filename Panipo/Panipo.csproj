@@ -140,6 +140,9 @@
       <DependentUpon>Pedidos.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Presentacion\Paneles\SobreNosotrosxaml.xaml.cs">
+      <DependentUpon>SobreNosotrosxaml.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
@@ -200,8 +203,10 @@
     <Content Include="Imagenes\pan_molde.jpg" />
     <Content Include="Imagenes\pan_tostado.jpg" />
     <Content Include="Imagenes\perfil.png" />
+    <Content Include="Imagenes\perfilGuada.jpg" />
     <Content Include="Imagenes\perfilJosu.jpg" />
-    <Content Include="Imagenes\perfilMj.png" />
+    <Content Include="Imagenes\perfilMJ.jpg" />
+    <Content Include="Imagenes\perfilSergio.png" />
     <Content Include="Imagenes\spicy logo blanco.png" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
@@ -237,6 +242,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Presentacion\Paneles\Pedidos.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Presentacion\Paneles\SobreNosotrosxaml.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
