@@ -16,6 +16,7 @@ namespace Panipo
         public string nombre_pan { get; set; }
         public string cover_pan { get; set; }
         public double precio_pan { get; set; }
+        public string descripcion_pan { get; set; }
 
         public static List<Pan> GetListPanes()
         {

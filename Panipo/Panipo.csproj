@@ -119,6 +119,12 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Presentacion\Componentes\ControlElementoCarrito.xaml.cs">
+      <DependentUpon>ControlElementoCarrito.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Paneles\CarritoCompra.xaml.cs">
+      <DependentUpon>CarritoCompra.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Persistencia\PanManager.cs" />
     <Compile Include="Presentacion\Paneles\DetallesProducto.xaml.cs">
       <DependentUpon>DetallesProducto.xaml</DependentUpon>
@@ -216,6 +222,14 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="Presentacion\Componentes\ControlElementoCarrito.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Presentacion\Paneles\CarritoCompra.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Presentacion\Paneles\DetallesProducto.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -252,9 +266,7 @@
       <Version>13.0.1</Version>
     </PackageReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Presentacion\Componentes\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>
