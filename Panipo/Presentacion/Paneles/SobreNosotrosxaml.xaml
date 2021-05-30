@@ -50,5 +50,6 @@
             <TextBlock  Text="María Jesús Dueñas Recuero" TextWrapping="Wrap" VerticalAlignment="Center" Height="70" Width="248" Foreground="Black" HorizontalAlignment="Center" FontSize="25" FontFamily="Verdana" TextAlignment="Center"/>
         </Grid>
         <TextBlock Grid.Column="1" Foreground="Black" HorizontalAlignment="Center" Grid.Row="3" Text="Sergio Silvestre Pavón" TextWrapping="Wrap" VerticalAlignment="Center" Width="248" Height="64" FontSize="25" FontFamily="Verdana" TextAlignment="Center"/>
+        <TextBlock Foreground="Black" FontSize="45" Grid.ColumnSpan="3" Grid.Column="2" HorizontalAlignment="Left" Height="91" Margin="1,110,0,0" Text="Miembros del equipo" TextWrapping="Wrap" VerticalAlignment="Top" Width="501" TextAlignment="Center" FontWeight="Bold"/>
     </Grid>
 </Page>
