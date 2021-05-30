@@ -85,7 +85,7 @@
 
                     <ListBoxItem x:Name="AboutUsListBoxItem">
                         <StackPanel Orientation="Horizontal">
-                            <TextBlock FontFamily="Segoe MDL2 Assets" FontSize="28" Text="&#xF142;" />
+                            <TextBlock FontFamily="sobreNosotros" FontSize="28" Text="&#xe900;" />
                             <TextBlock Text="Sobre Nosotros" FontSize="24" Margin="20,0,0,0" ToolTipService.ToolTip="Sobre Nosotros"  />
                         </StackPanel>
                     </ListBoxItem>
