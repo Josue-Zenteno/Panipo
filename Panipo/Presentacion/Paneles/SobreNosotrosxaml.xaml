@@ -6,50 +6,23 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+    
+   >
 
-    <Grid Background="White">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="200*"/>
-            <ColumnDefinition Width="200*"/>
-            <ColumnDefinition Width="200*"/>
-            <ColumnDefinition Width="200*"/>
-            <ColumnDefinition Width="200*"/>
-            <ColumnDefinition Width="200*"/>
-        </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
+    <RelativePanel Background="White">
 
-            <RowDefinition Height="333*"/>
-            <RowDefinition Height="55*"/>
-            <RowDefinition Height="279*"/>
-            <RowDefinition Height="69*"/>
-            <RowDefinition Height="53*"/>
-            <RowDefinition Height="333*"/>
+        <Image x:Name="ISergio"  Source="/Imagenes/perfilSergio.png" Width="200" Height="200" RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignHorizontalCenterWithPanel="True" RelativePanel.AlignVerticalCenterWithPanel="True" Stretch="Fill" NineGrid="0,0,0,0" Margin="200,0,0,0" />
+        <Image x:Name="IGuada"  Source="/Imagenes/perfilGuada.jpg" Width="200" Height="200" RelativePanel.RightOf="ISergio" RelativePanel.AlignVerticalCenterWithPanel="True" NineGrid="0,0,0,0" Margin="50,0,50,0" RelativePanel.Below=""  />
+        <Image x:Name="IJosue"  Source="/Imagenes/perfilJosu.jpg" Width="200" Height="200" RelativePanel.RightOf="IGuada" RelativePanel.AlignHorizontalCenterWithPanel="True" RelativePanel.AlignVerticalCenterWithPanel="True" Margin="0,0,50,0"  />
+        <Image x:Name="IMJ"  Source="/Imagenes/perfilMJ.jpg" Width="200" Height="200" RelativePanel.RightOf="IJosue" RelativePanel.AlignHorizontalCenterWithPanel="True" RelativePanel.AlignVerticalCenterWithPanel="True" NineGrid="0,0,0,0" Margin="50,0,0,0"  />
+        <TextBlock x:Name="TSergio" Text="Sergio Silvestre Pavón"  TextWrapping="Wrap" RelativePanel.Below="ISergio" RelativePanel.AlignHorizontalCenterWith="ISergio" FontSize="20" FontFamily="Verdana" TextAlignment="Center" Foreground="#FF0A0101" Margin="200,0,0,0"/>
+        <TextBlock x:Name="TGuada" Text="Guadalupe Plaza Gómez"  TextWrapping="Wrap" RelativePanel.Below="IGuada" RelativePanel.AlignHorizontalCenterWith="IGuada" FontSize="20" FontFamily="Verdana" TextAlignment="Center" Foreground="#FF0A0101" Width="199"/>
+        <TextBlock x:Name="TJosue" Text="Josue Zenteno Yave"  TextWrapping="Wrap" RelativePanel.Below="IJosue" RelativePanel.AlignHorizontalCenterWith="IJosue" FontSize="20" FontFamily="Verdana" TextAlignment="Center" Foreground="#FF0A0101" Width="166"/>
+        <TextBlock x:Name="TMJ"  Text="María Jesús Dueñas Recuero "  TextWrapping="Wrap" RelativePanel.Below="IMJ" RelativePanel.AlignHorizontalCenterWith="IMJ" FontSize="20" FontFamily="Verdana" TextAlignment="Center" Foreground="#FF0A0101" Width="166" Margin="50,0,0,0" RelativePanel.AlignVerticalCenterWithPanel="True" RelativePanel.AlignHorizontalCenterWithPanel="True"/>
+        <TextBlock Text="Miembros del equipo"  TextWrapping="Wrap" FontSize="50" Foreground="Black" FontStyle="Normal" FontFamily="Verdana" FontWeight="Bold" RelativePanel.AlignHorizontalCenterWithPanel="True" Margin="50,100,0,0" HorizontalAlignment="Center" VerticalAlignment="Center"/>
 
-        </Grid.RowDefinitions>
-        <Grid Margin="240,0,10,1" Grid.Row="1" Grid.ColumnSpan="2" Grid.RowSpan="2">
-            <Image HorizontalAlignment="Left" Height="313" VerticalAlignment="Center" Width="240" Source="/Imagenes/perfilSergio.png"/>
-        </Grid>
-        <Grid Grid.Column="2" Margin="10,1,240,0" Grid.Row="1" Grid.ColumnSpan="2" Grid.RowSpan="2">
-            <Image HorizontalAlignment="Left" Height="333" VerticalAlignment="Top" Width="240" Source="/Imagenes/perfilGuada.jpg" Stretch="Uniform" Margin="0,42,0,0"/>
-        </Grid>
-        <Grid Grid.Column="3" Margin="6,1,244,0" Grid.Row="1" Grid.ColumnSpan="2" Grid.RowSpan="2">
-            <Image HorizontalAlignment="Center" Height="313" VerticalAlignment="Center" Width="250" Source="/Imagenes/perfilJosu.jpg"/>
-        </Grid>
-        <Grid Grid.Column="4" Margin="10,1,240,0" Grid.Row="1" Grid.ColumnSpan="2" Grid.RowSpan="2">
-            <Image Source="/Imagenes/perfilMJ.jpg" Margin="0,32,10,47"/>
-        </Grid>
-        <Grid Grid.Column="1" Grid.Row="3"/>
-        <Grid Grid.Column="2" Grid.Row="3" Grid.ColumnSpan="2" Margin="1,0,249,0">
-            <TextBlock  Text="Guadalupe Plaza Gómez" TextWrapping="Wrap" VerticalAlignment="Center" Height="70" Width="248" Foreground="Black" HorizontalAlignment="Center" FontSize="25" FontFamily="Verdana" TextAlignment="Center"/>
-        </Grid>
-        <Grid Grid.Column="3" Grid.Row="3" Margin="0,5,0,48" Grid.RowSpan="2">
-            <TextBlock  Text="Josue Zenteno Yavhe" TextWrapping="Wrap" VerticalAlignment="Top" Height="70" Width="248" Foreground="Black" HorizontalAlignment="Center" FontSize="25" FontFamily="Verdana" TextAlignment="Center" Margin="0,-2,0,0"/>
-        </Grid>
-        <Grid Grid.Column="4" Grid.Row="3" Margin="5,0,245,0" Grid.ColumnSpan="2">
-            <TextBlock  Text="María Jesús Dueñas Recuero" TextWrapping="Wrap" VerticalAlignment="Center" Height="70" Width="248" Foreground="Black" HorizontalAlignment="Center" FontSize="25" FontFamily="Verdana" TextAlignment="Center"/>
-        </Grid>
-        <TextBlock Grid.Column="1" Foreground="Black" HorizontalAlignment="Center" Grid.Row="3" Text="Sergio Silvestre Pavón" TextWrapping="Wrap" VerticalAlignment="Center" Width="248" Height="64" FontSize="25" FontFamily="Verdana" TextAlignment="Center"/>
-        <TextBlock Foreground="Black" FontSize="45" Grid.ColumnSpan="3" Grid.Column="2" HorizontalAlignment="Left" Height="91" Margin="1,110,0,0" Text="Miembros del equipo" TextWrapping="Wrap" VerticalAlignment="Top" Width="501" TextAlignment="Center" FontWeight="Bold"/>
-    </Grid>
+    </RelativePanel>
+
+
 </Page>

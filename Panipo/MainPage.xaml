@@ -64,21 +64,21 @@
 
                     <ListBoxItem x:Name="PanesListBoxItem" ToolTipService.ToolTip="Panes">
                         <StackPanel Orientation="Horizontal">
-                            <TextBlock FontFamily="Segoe MDL2 Assets" FontSize="28" Text="&#xEC09;" />
+                            <TextBlock FontFamily="pan" FontSize="28" Text="&#xe900;" />
                             <TextBlock Text="Panes" FontSize="24" Margin="20,0,0,0"  />
                         </StackPanel>
                     </ListBoxItem>
 
-                    <ListBoxItem x:Name="PastelesListBoxItem" ToolTipService.ToolTip="Pasteles">
+                    <ListBoxItem x:Name="PastelesListBoxItem" ToolTipService.ToolTip="Pasteles" FontFamily="pastel">
                         <StackPanel Orientation="Horizontal">
-                            <TextBlock FontFamily="Segoe MDL2 Assets" FontSize="28" Text="&#xEC09;" />
+                            <TextBlock  Text="&#xe900;" FontFamily="pastel"  FontSize="28"  />
                             <TextBlock Text="Pasteles" FontSize="24" Margin="20,0,0,0"  />
                         </StackPanel>
                     </ListBoxItem>
 
                     <ListBoxItem x:Name="BollosListBoxItem" ToolTipService.ToolTip="Bollos">
                         <StackPanel Orientation="Horizontal">
-                            <TextBlock FontFamily="Segoe MDL2 Assets" FontSize="28" Text="&#xEC09;" />
+                            <TextBlock FontFamily="bollo" FontSize="28" Text="&#xe900;"/>
                             <TextBlock Text="Bollos" FontSize="24" Margin="20,0,0,0"  />
                         </StackPanel>
                     </ListBoxItem>

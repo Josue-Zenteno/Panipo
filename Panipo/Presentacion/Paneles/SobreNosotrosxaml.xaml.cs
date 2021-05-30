@@ -5,6 +5,7 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI.ViewManagement;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -25,6 +26,50 @@ namespace Panipo
         public SobreNosotrosxaml()
         {
             this.InitializeComponent();
+            Windows.UI.ViewManagement.ApplicationView.GetForCurrentView().VisibleBoundsChanged += UcRatingText_VisibleBoundsChanged;
+        }
+
+        private void UcRatingText_VisibleBoundsChanged(ApplicationView sender, object args)
+        {
+            var Width = Windows.UI.ViewManagement.ApplicationView.GetForCurrentView().VisibleBounds.Width;
+
+            if (Width >= 360)
+            {
+                //RelativePanel.SetBelow(imgPerfil, imgLogo);
+               /* RelativePanel.SetRightOf(ISergio, IGuada);
+                RelativePanel.SetRightOf(IGuada, IJosue);
+                RelativePanel.SetRightOf(IJosue, IMJ);
+                RelativePanel.SetBelow(ISergio, TSergio);
+                RelativePanel.SetBelow(IGuada, TGuada);
+                RelativePanel.SetBelow(IJosue, TJosue);
+                RelativePanel.SetBelow(IMJ, TMJ);*/
+
+
+                //RelativePanel.SetRightOf(lblTituloHomePage, imgLogo);
+                // RelativePanel.SetAlignVerticalCenterWith(lblTituloHomePage, imgLogo);
+                //RelativePanel.SetAlignVerticalCenterWithPanel(imgLogo, true);
+
+
+            }
+            else
+            {
+                RelativePanel.SetBelow(IGuada, ISergio);
+                RelativePanel.SetBelow(IJosue, IGuada);
+                RelativePanel.SetBelow(IMJ, IJosue);
+               /* RelativePanel.SetBelow(TSergio, ISergio);
+                RelativePanel.SetBelow(TGuada, IGuada);
+                RelativePanel.SetBelow(TJosue, IJosue);
+                RelativePanel.SetBelow(TMJ, IMJ);*/
+
+                // RelativePanel.SetBelow(PSergio, PGuada);
+                // RelativePanel.SetBelow(lblTexto, lblTituloHomePage);
+                // RelativePanel.AlignBottomWithPanelProperty();
+                //RelativePanel.SetRightOf(lblTituloHomePage, null);
+                //RelativePanel.SetBelow(lblTituloHomePage, imgLogo);
+                //RelativePanel.SetAlignVerticalCenterWith(lblTituloHomePage, null);
+                //RelativePanel.SetAlignVerticalCenterWithPanel(imgLogo, false);
+            }
         }
     }
+   
 }
