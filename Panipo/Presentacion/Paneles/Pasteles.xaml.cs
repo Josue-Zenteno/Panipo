@@ -1,5 +1,5 @@
-﻿using Panipo.Presentacion.Paneles;
-using System;
+﻿using System;
+using Panipo.Presentacion.Paneles;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -12,57 +12,40 @@ using Windows.UI.Xaml.Controls.Primitives;
 using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
-using Windows.UI.Xaml.Media.Imaging;
 using Windows.UI.Xaml.Navigation;
 
+// La plantilla de elemento Página en blanco está documentada en https://go.microsoft.com/fwlink/?LinkId=234238
 
 namespace Panipo
 {
     /// <summary>
     /// Una página vacía que se puede usar de forma independiente o a la que se puede navegar dentro de un objeto Frame.
     /// </summary>
-    public sealed partial class Panes : Page
+    public sealed partial class Pasteles : Page
     {
 
-        public List<Pan> lista_panes = Pan.GetListPanes();
-        public static Pan panes_info;
-        public Image imgPan = new Image();
+        public List<Pastel> lista_pasteles = Pastel.GetListPasteles();
+        public static Pastel pasteles_info;
+        public Image imgPastel = new Image();
 
-
-
-        public Panes()
+        public Pasteles()
         {
-
             this.InitializeComponent();
-
-            //lista_panes = PanManager.GetPanes();
-            //inicializarPanes();
-
         }
+
 
         public void GridView_ItemClick(object sender, ItemClickEventArgs e)
         {
-            var panes = (Pan)e.ClickedItem;
-            panes_info = panes;
+            var pasteles = (Pastel)e.ClickedItem;
+            pasteles_info = pasteles;
             c.Navigate(typeof(DetallesProducto));
         }
 
         private void on_click(object sender, RoutedEventArgs e)
         {
 
-
             c.Navigate(typeof(DetallesProducto));
 
         }
-
-        /**
-        public void inicializarPanes() {
-            
-            lista_panes = PanManager.GetPanes();
-            foreach(Pan item in lista_panes) {
-                //this.listViewPanes.Items.Add("Nombre: " + item.nombre_pan);
-            }
-        }
-       */
     }
 }

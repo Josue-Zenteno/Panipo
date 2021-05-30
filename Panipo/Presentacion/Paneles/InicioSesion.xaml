@@ -16,9 +16,9 @@
 
             <TextBlock x:Name="lblTituloInicioSesion" Text="Bienvenido a Panipo" TextWrapping="Wrap" FontSize="30" FontFamily="Segoe UI" FontWeight="Bold" HorizontalAlignment="Center" Margin="20,50,20,20" Foreground="#FFFAFBFD"/>
 
-            <TextBox x:Name="txtNombreUsuario" Margin="50,100,50,30" Header="Nombre usuario" Foreground="White" PlaceholderText="Introduzca el nombre de usuario" Height="Auto" FontSize="16" FontFamily="Segoe UI" Background="#66FFFFFF" SelectionHighlightColor="White" />
+            <TextBox x:Name="txtNombreUsuario" Margin="50,70,50,30" Header="Nombre usuario" Foreground="White" PlaceholderText="Introduzca el nombre de usuario" Height="Auto" FontSize="16" FontFamily="Segoe UI" Background="#66FFFFFF" SelectionHighlightColor="White" />
             <PasswordBox x:Name="txtContrasena" Header="Contraseña" PlaceholderText="Introduzca la contraseña" PasswordChar="#" Height="Auto" HorizontalAlignment="Stretch" Width="450" Margin="50,15,50,30" FontSize="16" FontFamily="Segoe UI" Foreground="Snow" Background="#66FFFFFF" />
-            <Button x:Name="btnAceptar" Style="{StaticResource ButtonRevealStyle}" Content="Aceptar" HorizontalAlignment="Right" Margin="0,30,50,0" FontSize="14" FontFamily="Segoe UI" Background="#FFFAFBFD" FontWeight="Bold" VerticalAlignment="Stretch" Width="150" Foreground="Black" />
+            <Button x:Name="btnAceptar" Style="{StaticResource ButtonRevealStyle}" Content="Aceptar" HorizontalAlignment="Right" Margin="0,25,50,0" FontSize="14" FontFamily="Segoe UI" Background="#FFFAFBFD" FontWeight="Bold" VerticalAlignment="Stretch" Width="150" Foreground="Black" />
 
         </StackPanel>
     </RelativePanel>

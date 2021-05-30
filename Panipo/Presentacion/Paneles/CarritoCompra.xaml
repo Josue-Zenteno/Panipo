@@ -31,7 +31,7 @@
                 </ListView.ItemContainerStyle>
             </ListView>
 
-            <Button Grid.Row="1" Background="#FF618F61" Foreground="White" Content="Finalizar Compra" FontFamily="Verdana" FontSize="26" CornerRadius="5" HorizontalAlignment="Right" Margin="0,0,40,40"/>
+            <Button Grid.Row="1" Background="#FF618F61" Foreground="White" Content="Finalizar Compra" FontFamily="Verdana" FontSize="26" CornerRadius="5" HorizontalAlignment="Right" Margin="0,0,40,40" Click="FinalizarCompra_Click"/>
 
         </Grid>
     </ScrollViewer>

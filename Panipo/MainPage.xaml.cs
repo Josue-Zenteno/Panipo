@@ -73,17 +73,17 @@ namespace Panipo
             else if (PastelesListBoxItem.IsSelected)
             {
                 MenuTitle.Text = "Pasteles";
-                //ContentFrame.Navigate(typeof(Pasteles));
+                ContentFrame.Navigate(typeof(Pasteles));
             }
             else if (BollosListBoxItem.IsSelected)
             {
                 MenuTitle.Text = "Bollos";
-                //ContentFrame.Navigate(typeof(Bollos));
+                ContentFrame.Navigate(typeof(Bollos));
             }
             else if (AboutUsListBoxItem.IsSelected)
             {
                 MenuTitle.Text = "Sobre Nosotros";
-                //ContentFrame.Navigate(typeof(SobreNosotros));
+                ContentFrame.Navigate(typeof(SobreNosotros));
             }
         }
 

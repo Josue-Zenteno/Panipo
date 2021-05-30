@@ -35,7 +35,7 @@ namespace Panipo
         public string PrecioPan
         {
             get { return lblPrecioPan.Text; }
-            set { lblPrecioPan.Text = value; }
+            set { lblPrecioPan.Text = value + " €"; }
         }
 
         public ImageSource CoverPan

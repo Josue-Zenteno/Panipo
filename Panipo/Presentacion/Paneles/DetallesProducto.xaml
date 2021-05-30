@@ -2,49 +2,109 @@
     x:Class="Panipo.Presentacion.Paneles.DetallesProducto"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:Panipo.Presentacion.Paneles"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    Background="White">
+    xmlns:local="using:Panipo"
+    Background="#FF2B2B2B">
 
-    <Grid Name="DetailGrid" Grid.Column="1" Grid.Row="0" Margin="10,0,10,0">
+    <Grid Name="LayoutRoot" Background="#FF2B2B2B">
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup x:Name="VisualStateGroup">
+                <VisualState x:Name="Wide">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="800" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="First.(Grid.Row)" Value="0" />
+                        <Setter Target="First.(Grid.Column)" Value="0" />
+                        <Setter Target="Second.(Grid.Row)" Value="0" />
+                        <Setter Target="Second.(Grid.Column)" Value="1" />
+                        <Setter Target="First.(Grid.ColumnSpan)" Value="1" />
+                        <Setter Target="Second.(Grid.ColumnSpan)" Value="1" />
+
+                    </VisualState.Setters>
+                </VisualState>
+                <VisualState x:Name="Narrow">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="0" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="First.(Grid.Row)" Value="0" />
+                        <Setter Target="First.(Grid.Column)" Value="0" />
+                        <Setter Target="Second.(Grid.Row)" Value="1" />
+                        <Setter Target="Second.(Grid.Column)" Value="0" />
+                        <Setter Target="First.(Grid.ColumnSpan)" Value="3" />
+                        <Setter Target="Second.(Grid.ColumnSpan)" Value="3" />
+
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
         <Grid.RowDefinitions>
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
+        <ScrollViewer Grid.Row="1" Margin="-10,0,10,0">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="158*" />
+                    <RowDefinition Height="41*" />
+                    <RowDefinition Height="301*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="0*"/>
+                </Grid.ColumnDefinitions>
 
-        <Grid Grid.Row="0" 
-                  HorizontalAlignment="Left" 
-                  VerticalAlignment="Top">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="Auto" />
-                <RowDefinition Height="*" />
-            </Grid.RowDefinitions>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="Auto" />
-                <ColumnDefinition Width="*" />
-            </Grid.ColumnDefinitions>
+                <StackPanel Orientation="Vertical" Name="First" Margin="20,20,0,43">
+                    <Image Source="{x:Bind Path=ventana_panes_info.cover_pan}"  HorizontalAlignment="Left" />
 
-            <Image Name="DetailImage" Source="{x:Bind ventana_panes_info.cover_pan}"
-                       Grid.Column="0" 
-                       Grid.RowSpan="2" 
-                       VerticalAlignment="Stretch" Width="400" Height="200"/>
-            <TextBlock Name="DetailNameTextBlock " Text="{x:Bind ventana_panes_info.nombre_pan}" 
-                           FontSize="32" 
-                           Grid.Column="1" 
-                           Foreground="Black"
-                            />
-            <TextBlock Name="DetailDescriptionTextBlock" Text="{x:Bind ventana_panes_info.precio_pan}" 
-                           Foreground="Black"
-                           Grid.Row="1" 
-                           Grid.Column="1" 
-                           TextWrapping="Wrap"
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock x:Name="lblPrecioPan" FontSize="45" FontFamily="Verdana" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="0,0,70,0">
+                            <Run Text="{x:Bind Path=ventana_panes_info.precio_pan}"/>
+                            <Run Text="€"/>
+                        </TextBlock>
+                        <Button x:Name="btnCesta" CornerRadius="5" Margin="0,25,0,0" HorizontalAlignment="Right" Background="#FFFAA944">
+                            <FontIcon Glyph="&#xE7BF;" FontFamily="Segoe MDL2 Assets" FontSize="30"/>
+                        </Button>
+                    </StackPanel>
+
+                </StackPanel>
+                <StackPanel Name="Second" Grid.Row="1" Margin="20,5,10,275" Grid.ColumnSpan="2">
+                    <TextBlock x:Name="DetailDescriptionTextBlock" Text="{x:Bind Path=ventana_panes_info.nombre_pan}" 
+                           Foreground="White" FontSize="32" FontWeight="Bold" Height="42" Margin="0,5,0,0"
+                         
                            />
+                    <TextBlock TextWrapping="Wrap" Foreground="White" Margin="0,15,0,0"><Run Text="{x:Bind Path=ventana_panes_info.descripcion_pan}"/></TextBlock>
+                </StackPanel>
 
-        </Grid>
 
+                <!-- List of Comics -->
+                <GridView ItemsSource="{x:Bind Path=lista_panes_info}" Grid.Row="2" Margin="20,81,10,1" Grid.ColumnSpan="2" >
+
+                    <GridView.ItemTemplate>
+                        <DataTemplate x:DataType="local:Pan">
+                            <StackPanel HorizontalAlignment="Center">
+
+                                <Button HorizontalAlignment="Left" Height="175" Width="200">
+                                    <Button.Background>
+                                        <ImageBrush ImageSource="{x:Bind Path=cover_pan}" Stretch="UniformToFill"/>
+                                    </Button.Background>
+                                </Button>
+
+                            </StackPanel>
+                        </DataTemplate>
+                    </GridView.ItemTemplate>
+                </GridView>
+                <TextBlock x:Name="txtRecomendados" Margin="20,1,0,550" Grid.Row="2" Text="A nuestros clientes también les gusto..." TextWrapping="Wrap" 
+                           Foreground="White" FontSize="18" FontWeight="Bold" Grid.ColumnSpan="2"/>
+
+            </Grid>
+
+
+        </ScrollViewer>
     </Grid>
 
 </Page>
