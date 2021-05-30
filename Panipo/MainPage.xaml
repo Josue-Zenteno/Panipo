@@ -70,28 +70,28 @@
 
                     <ListBoxItem x:Name="PanesListBoxItem" ToolTipService.ToolTip="Panes">
                         <StackPanel Orientation="Horizontal">
-                            <TextBlock FontFamily="Segoe MDL2 Assets" FontSize="28" Text="&#xEC09;" />
+                            <TextBlock FontFamily="pan" FontSize="28" Text="&#xe900;" />
                             <TextBlock Text="Panes" FontSize="24" Margin="20,0,0,0"  />
                         </StackPanel>
                     </ListBoxItem>
 
                     <ListBoxItem x:Name="PastelesListBoxItem" ToolTipService.ToolTip="Pasteles">
                         <StackPanel Orientation="Horizontal">
-                            <TextBlock FontFamily="Segoe MDL2 Assets" FontSize="28" Text="&#xEC09;" />
+                            <TextBlock FontFamily="pastel" FontSize="28" Text="&#xe902;" />
                             <TextBlock Text="Pasteles" FontSize="24" Margin="20,0,0,0"  />
                         </StackPanel>
                     </ListBoxItem>
 
                     <ListBoxItem x:Name="BollosListBoxItem" ToolTipService.ToolTip="Bollos">
                         <StackPanel Orientation="Horizontal">
-                            <TextBlock FontFamily="Segoe MDL2 Assets" FontSize="28" Text="&#xEC09;" />
+                            <TextBlock FontFamily="bollo" FontSize="28" Text="&#xe901;" />
                             <TextBlock Text="Bollos" FontSize="24" Margin="20,0,0,0"  />
                         </StackPanel>
                     </ListBoxItem>
 
                     <ListBoxItem x:Name="AboutUsListBoxItem">
                         <StackPanel Orientation="Horizontal">
-                            <TextBlock FontFamily="Segoe MDL2 Assets" FontSize="28" Text="&#xF142;" />
+                            <TextBlock FontFamily="sobreNosotros" FontSize="28" Text="&#xe900;" />
                             <TextBlock Text="Sobre Nosotros" FontSize="24" Margin="20,0,0,0" ToolTipService.ToolTip="Sobre Nosotros"  />
                         </StackPanel>
                     </ListBoxItem>

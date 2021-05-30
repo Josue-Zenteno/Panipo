@@ -22,9 +22,14 @@ namespace Panipo
     /// </summary>
     public sealed partial class SobreNosotros : Page
     {
+       public  List<Componentes> Lista_Componentes = Componentes.GetListComponentes();
+       
         public SobreNosotros()
         {
+
             this.InitializeComponent();
         }
+
     }
-}
+   
+   }

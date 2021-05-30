@@ -119,6 +119,8 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Dominio\Componentes.cs" />
+    <Compile Include="Persistencia\ComponentesManager.cs" />
     <Compile Include="Presentacion\Paneles\Bollos.xaml.cs">
       <DependentUpon>Bollos.xaml</DependentUpon>
     </Compile>
@@ -295,7 +297,18 @@
       <Version>13.0.1</Version>
     </PackageReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Assets\sobreNosotros.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\pan.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\bollo.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\pastel.ttf" />
+  </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>
