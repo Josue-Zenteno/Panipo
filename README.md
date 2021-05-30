@@ -1,4 +1,4 @@
-# IPO2
+# Panipo
 
 Project members:
 1. Josue Carlos Zenteno Yave <<JosueCarlos.Zenteno@alu.uclm.es>>
