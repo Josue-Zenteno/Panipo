@@ -5,27 +5,26 @@
     xmlns:local="using:Panipo"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d">
+    mc:Ignorable="d" FocusVisualPrimaryBrush="#FFA87851" Background="#FFFDF8F8">
 
     <RelativePanel Background="White">
 
-        <Image x:Name="imgLogo" Source="/Imagenes/marcaCorporativa.PNG" Height="300" Margin="50,50,0,0"/>
-        <TextBlock RelativePanel.RightOf="imgLogo" RelativePanel.AlignVerticalCenterWith="imgLogo"
+        <Image x:Name="imgLogo" Source="/Imagenes/marcaCorporativa.PNG" Height="251" Width="283" Margin="0,0,0,400" HorizontalAlignment="Stretch" RelativePanel.AlignHorizontalCenterWithPanel="True" RelativePanel.AlignVerticalCenterWithPanel="True"/>
+        <TextBlock RelativePanel.Above="imgLogo" RelativePanel.AlignVerticalCenterWith="imgLogo"
                    x:Name="lblTituloHomePage" Grid.Column="1"
-                   FontSize="40" Text="Panadería a domicilio y mucho más" TextWrapping="Wrap" Foreground="Black" FontWeight="Bold" Margin="10,25,20,0"/>
+                   FontSize="40" Text="Panadería a domicilio y mucho más" TextWrapping="Wrap" Foreground="Black" FontWeight="Bold" Margin="10,25,20,0" RelativePanel.AlignHorizontalCenterWithPanel="True"/>
 
-        <Image x:Name="imgPerfil" RelativePanel.Below="imgLogo" Source="/Imagenes/perfilMj.png" HorizontalAlignment="Stretch" Height="200" Margin="125,150,0,0"/>
 
-        <StackPanel x:Name="spTexto" RelativePanel.Below="lblTituloHomePage" RelativePanel.RightOf="imgLogo" Margin="10,10,0,0">
-            <TextBlock RelativePanel.RightOf="imgLogo" RelativePanel.AlignVerticalCenterWith="imgLogo"
+        <StackPanel x:Name="spTexto" RelativePanel.Below="lblTituloHomePage" RelativePanel.AlignBottomWith="imgLogo" Margin="10,10,0,0" RelativePanel.AlignHorizontalCenterWithPanel="True">
+            <TextBlock RelativePanel.AlignBottomWith="imgLogo" RelativePanel.AlignVerticalCenterWith="imgLogo"
             x:Name="lblTexto"
-            FontSize="22" Text="Apostamos por el desarrollo y la innovación de nuestros productos" TextWrapping="Wrap" Foreground="Black" FontWeight="Normal"/>
-            <TextBlock RelativePanel.RightOf="imgLogo" RelativePanel.AlignVerticalCenterWith="imgLogo"
+            FontSize="22" Text="Apostamos por el desarrollo y la innovación de nuestros productos" TextWrapping="Wrap" Foreground="Black" FontWeight="Normal" TextAlignment="Center"/>
+            <TextBlock RelativePanel.AlignBottomWith="imgLogo" RelativePanel.AlignVerticalCenterWith="imgLogo"
                 x:Name="lblTexto1"
-                FontSize="22" Text="Destacamos por la personalización de las harinas al gusto del consumidor " TextWrapping="Wrap" Foreground="Black" FontWeight="Normal"/>
+                FontSize="22" Text="Destacamos por la personalización de las harinas al gusto del consumidor " TextWrapping="Wrap" Foreground="Black" FontWeight="Normal" TextAlignment="Center"/>
             <TextBlock RelativePanel.RightOf="imgLogo" RelativePanel.AlignVerticalCenterWith="imgLogo"
                 x:Name="lblTexto2"
-                FontSize="22" TextWrapping="Wrap" Foreground="Black" FontWeight="Normal"><Run Text="Ofrecemos un servivio"/><Run Text=" cercano"/><Run Text=" y familiar para que en "/><Run Text="la"/><Run Text=" mesa nunca falte el pan"/></TextBlock>
+                FontSize="22" TextWrapping="Wrap" Foreground="Black" FontWeight="Normal" TextAlignment="Center"><Run Text="Ofrecemos un servivio"/><Run Text=" cercano"/><Run Text=" y familiar para que en "/><Run Text="la"/><Run Text=" mesa nunca falte el pan"/></TextBlock>
         </StackPanel>
 
     </RelativePanel>

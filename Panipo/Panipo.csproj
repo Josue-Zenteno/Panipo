@@ -119,6 +119,22 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Presentacion\Paneles\Bollos.xaml.cs">
+      <DependentUpon>Bollos.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Dominio\Bollo.cs" />
+    <Compile Include="Presentacion\Paneles\Pasteles.xaml.cs">
+      <DependentUpon>Pasteles.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Persistencia\BolloManager.cs" />
+    <Compile Include="Dominio\Pastel.cs" />
+    <Compile Include="Persistencia\PastelManager.cs" />
+    <Compile Include="Presentacion\Componentes\ControlElementoCarrito.xaml.cs">
+      <DependentUpon>ControlElementoCarrito.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Paneles\CarritoCompra.xaml.cs">
+      <DependentUpon>CarritoCompra.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Persistencia\PanManager.cs" />
     <Compile Include="Presentacion\Paneles\DetallesProducto.xaml.cs">
       <DependentUpon>DetallesProducto.xaml</DependentUpon>
@@ -140,6 +156,9 @@
       <DependentUpon>Pedidos.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Presentacion\Paneles\SobreNosotros.xaml.cs">
+      <DependentUpon>SobreNosotros.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
@@ -200,8 +219,12 @@
     <Content Include="Imagenes\pan_molde.jpg" />
     <Content Include="Imagenes\pan_tostado.jpg" />
     <Content Include="Imagenes\perfil.png" />
+    <Content Include="Imagenes\perfilGuada.jpg" />
     <Content Include="Imagenes\perfilJosu.jpg" />
+    <Content Include="Imagenes\perfilJosu.png" />
+    <Content Include="Imagenes\perfilMJ.jpg" />
     <Content Include="Imagenes\perfilMj.png" />
+    <Content Include="Imagenes\perfilSergio.png" />
     <Content Include="Imagenes\spicy logo blanco.png" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
@@ -216,6 +239,22 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="Presentacion\Paneles\Bollos.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Presentacion\Paneles\Pasteles.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Presentacion\Componentes\ControlElementoCarrito.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Presentacion\Paneles\CarritoCompra.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Presentacion\Paneles\DetallesProducto.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -240,6 +279,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Presentacion\Paneles\SobreNosotros.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
@@ -252,9 +295,7 @@
       <Version>13.0.1</Version>
     </PackageReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Presentacion\Componentes\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>

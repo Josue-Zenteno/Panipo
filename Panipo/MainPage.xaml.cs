@@ -14,26 +14,21 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
-// La plantilla de elemento Página en blanco está documentada en https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0xc0a
-
 namespace Panipo
 {
-    /// <summary>
-    /// Página vacía que se puede usar de forma independiente o a la que se puede navegar dentro de un objeto Frame.
-    /// </summary>
     public sealed partial class MainPage : Page
     {
         public MainPage()
         {
             this.InitializeComponent();
             Windows.UI.ViewManagement.ApplicationView.GetForCurrentView().SetPreferredMinSize(new Size(700,1000));
-            Windows.UI.ViewManagement.ApplicationView.GetForCurrentView().VisibleBoundsChanged += MainPage_VisibleBoundsChanged;
+            Windows.UI.ViewManagement.ApplicationView.GetForCurrentView().VisibleBoundsChanged += Ventana_Resize;
             
-            IconsListBox.SelectedIndex = 0;
+            listBoxSecciones.SelectedIndex = 0;
             ContentFrame.Navigate(typeof(Inicio));
         }
 
-        private void MainPage_VisibleBoundsChanged(Windows.UI.ViewManagement.ApplicationView sender, object args)
+        private void Ventana_Resize(Windows.UI.ViewManagement.ApplicationView sender, object args)
         {
             var Width = Windows.UI.ViewManagement.ApplicationView.GetForCurrentView().VisibleBounds.Width;
 
@@ -46,11 +41,13 @@ namespace Panipo
             {
                 svMenu.DisplayMode = SplitViewDisplayMode.CompactOverlay;
                 svMenu.IsPaneOpen = false;
+                svUpperBar.IsPaneOpen = false;
             }
             else
             {
                 svMenu.DisplayMode = SplitViewDisplayMode.Overlay;
                 svMenu.IsPaneOpen = false;
+                svUpperBar.IsPaneOpen = false;
             }
         }
 
@@ -59,7 +56,38 @@ namespace Panipo
             svMenu.IsPaneOpen = !svMenu.IsPaneOpen;
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void Seccion_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (InicioListBoxItem.IsSelected)
+            {
+                MenuTitle.Text = "Inicio";
+
+                ContentFrame.Navigate(typeof(Inicio));
+            }
+            else if (PanesListBoxItem.IsSelected)
+            {
+                MenuTitle.Text = "Panes";
+
+                ContentFrame.Navigate(typeof(Panes));
+            }
+            else if (PastelesListBoxItem.IsSelected)
+            {
+                MenuTitle.Text = "Pasteles";
+                ContentFrame.Navigate(typeof(Pasteles));
+            }
+            else if (BollosListBoxItem.IsSelected)
+            {
+                MenuTitle.Text = "Bollos";
+                ContentFrame.Navigate(typeof(Bollos));
+            }
+            else if (AboutUsListBoxItem.IsSelected)
+            {
+                MenuTitle.Text = "Sobre Nosotros";
+                ContentFrame.Navigate(typeof(SobreNosotros));
+            }
+        }
+
+        private void AbrirBarraBusqueda_Click(object sender, RoutedEventArgs e)
         {
             if (svUpperBar.IsPaneOpen == false)
             {
@@ -72,31 +100,24 @@ namespace Panipo
             
         }
 
-        private void IconsListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            if (InicioListBoxItem.IsSelected) {  
-                MenuTitle.Text = "Inicio";
-
-                ContentFrame.Navigate(typeof(Inicio));
-            }
-            else if (PanesListBoxItem.IsSelected) { 
-                MenuTitle.Text = "Panes";
-
-                ContentFrame.Navigate(typeof(Panes));
-            }
-            else if (PastelesListBoxItem.IsSelected) { 
-                MenuTitle.Text = "Pasteles";
-                ContentFrame.Navigate(typeof(Pedidos));
-            }
-            else if (BollosListBoxItem.IsSelected) { 
-                MenuTitle.Text = "Bollos";
-                ContentFrame.Navigate(typeof(InicioSesion));
-            }
-        }
-
-        private void Prueba(object sender, RoutedEventArgs e)
+        private void CerrarBarraBusqueda_Focus(object sender, RoutedEventArgs e)
         {
             svUpperBar.IsPaneOpen = false;
+        }
+
+        private void CarritoCompra_Click(object sender, RoutedEventArgs e)
+        {
+            ContentFrame.Navigate(typeof(CarritoCompra));
+        }
+
+        private void IniciarSesion_Click(object sender, RoutedEventArgs e)
+        {
+            ContentFrame.Navigate(typeof(InicioSesion));
+        }
+
+        private void CerrarSesion_Click(object sender, RoutedEventArgs e)
+        {
+            //TODO cerrar sesion
         }
     }
 }

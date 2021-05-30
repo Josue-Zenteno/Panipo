@@ -9,33 +9,37 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" HorizontalAlignment="Stretch">
 
     <Grid Background="White">
+        
         <Grid Height="48" VerticalAlignment="Top" Background="#FF534D4D">
 
             <StackPanel Orientation="Horizontal" Background="#FF534D4D" Margin="2,0,0,0" FlowDirection="RightToLeft">
 
-                <Button Margin="20,0,0,0" Background="{x:Null}" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" ToolTipService.ToolTip="Perfil">
+                <Button x:Name="btnCerrarSesion" Margin="20,0,0,0" Background="{x:Null}" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" ToolTipService.ToolTip="Cerrar Sesion"  Visibility="Collapsed" Click="CerrarSesion_Click">
                     <FontIcon Glyph="&#xE77B;" FontFamily="Segoe MDL2 Assets" FontSize="20"/>
                 </Button>
 
-                <Button Margin="20,0,0,0" Background="{x:Null}" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" ToolTipService.ToolTip="Mi Carrito">
+                <Button x:Name="btnIniciarSesion" Margin="20,0,0,0" Background="{x:Null}" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" ToolTipService.ToolTip="Iniciar Sesion" Click="IniciarSesion_Click">
+                    <FontIcon Glyph="&#xE77B;" FontFamily="Segoe MDL2 Assets" FontSize="20"/>
+                </Button>
+
+                <Button x:Name="btnCarritoCompra" Margin="20,0,0,0" Background="{x:Null}" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" ToolTipService.ToolTip="Mi Carrito" Click="CarritoCompra_Click">
                     <FontIcon Glyph="&#xE7BF;" FontFamily="Segoe MDL2 Assets" FontSize="20"/>
                 </Button>
 
-                <Button  Margin="20,0,0,0" Background="{x:Null}" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Click="Button_Click" ToolTipService.ToolTip="Buscar">
+                <Button x:Name="btnAbrirBarraBusqueda"  Margin="20,0,0,0" Background="{x:Null}" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Click="AbrirBarraBusqueda_Click" ToolTipService.ToolTip="AbrirBarraBusqueda_Click">
                     <FontIcon Glyph="&#xE721;" FontFamily="Segoe MDL2 Assets" FontSize="20" Margin="0,0,0,0"/>
                 </Button>
 
                 <SplitView x:Name="svUpperBar" IsPaneOpen="False" PanePlacement="Left" OpenPaneLength="250" CompactPaneLength="0" DisplayMode="CompactInline" Width="250">
                     <SplitView.Pane>
-                        <TextBox x:Name="txtBusqueda" TextWrapping="Wrap" VerticalContentAlignment="Center" Background="#FF3A3636" LostFocus="Prueba"/>
+                        <TextBox x:Name="txtBusqueda" TextWrapping="Wrap" VerticalContentAlignment="Center" Background="#FF3A3636" LostFocus="CerrarBarraBusqueda_Focus"/>
                     </SplitView.Pane>
                 </SplitView>
 
             </StackPanel>
 
         </Grid>
-
-
+        
         <RelativePanel>
             <StackPanel Orientation="Horizontal">
                 <Button x:Name="HamburgerButton" FontFamily="Segoe MDL2 Assets" Content="&#xE700;" FontSize="35" Click="HamburgerButton_Click"/>
@@ -44,12 +48,14 @@
         </RelativePanel>
 
         <SplitView x:Name="svMenu" IsPaneOpen="True" PanePlacement="Left" OpenPaneLength="250" CompactPaneLength="55" DisplayMode="CompactInline" Margin="0,48,0,0" >
+            
             <SplitView.Background>
                 <ImageBrush/>
             </SplitView.Background>
+            
             <SplitView.Pane>
 
-                <ListBox SelectionMode="Single" x:Name="IconsListBox" SelectionChanged="IconsListBox_SelectionChanged">
+                <ListBox SelectionMode="Single" x:Name="listBoxSecciones" SelectionChanged="Seccion_SelectionChanged">
 
                     <ListBox.Background>
                         <ImageBrush ImageSource="/Imagenes/fondomenu.PNG" Stretch="UniformToFill" Opacity="0.6"/>

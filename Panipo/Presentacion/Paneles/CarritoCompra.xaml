@@ -1,0 +1,39 @@
+﻿<Page
+    x:Class="Panipo.CarritoCompra"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Panipo"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Page.Resources>
+        <DataTemplate x:Key="ElementosCarritoCompra" x:DataType="local:Pan">
+            <local:ControlElementoCarrito NombrePan="{x:Bind nombre_pan}" DescripcionPan="{x:Bind descripcion_pan}" PrecioPan="{x:Bind precio_pan}" CoverPan="{x:Bind cover_pan}" HorizontalAlignment="Stretch"/>
+        </DataTemplate>
+    </Page.Resources>
+
+    <ScrollViewer>
+        <Grid Background="#FF2B2B2B">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <ListView Grid.Row="0" x:Name="lstPanesCarritoCompra" ItemTemplate="{StaticResource ElementosCarritoCompra}" ItemsSource="{x:Bind panesCarritoCompra}" Margin="0,5,0,0">
+                <ListView.ItemContainerStyle>
+                    <Style TargetType="ListViewItem">
+                        <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+                        <Setter Property="Padding" Value="0" />
+                    </Style>
+                </ListView.ItemContainerStyle>
+            </ListView>
+
+            <Button Grid.Row="1" Background="#FF618F61" Foreground="White" Content="Finalizar Compra" FontFamily="Verdana" FontSize="26" CornerRadius="5" HorizontalAlignment="Right" Margin="0,0,40,40" Click="FinalizarCompra_Click"/>
+
+        </Grid>
+    </ScrollViewer>
+    
+</Page>

@@ -15,19 +15,14 @@ using Windows.UI.Xaml.Navigation;
 
 // La plantilla de elemento Página en blanco está documentada en https://go.microsoft.com/fwlink/?LinkId=234238
 
-namespace Panipo.Presentacion.Paneles
+namespace Panipo
 {
     /// <summary>
     /// Una página vacía que se puede usar de forma independiente o a la que se puede navegar dentro de un objeto Frame.
     /// </summary>
-    public sealed partial class DetallesProducto : Page
+    public sealed partial class SobreNosotros : Page
     {
-
-        public Pan ventana_panes_info = Panes.panes_info;
-
-        public List<Pan> lista_panes_info = Pan.GetListPanes();
-
-        public DetallesProducto()
+        public SobreNosotros()
         {
             this.InitializeComponent();
         }
