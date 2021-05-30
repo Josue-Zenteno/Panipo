@@ -1,0 +1,62 @@
+{
+    "Chocolate Supreme":{
+        "id":0,
+        "cover":"/Imagenes/pasteles/fotopastel_1.jpg",
+        "precio":80,
+        "descripcion":"La tarta del hype beast solo la verdadera calle se compra este pastel"
+    },
+    "My little pony":{
+        "id":0,
+        "cover":"/Imagenes/pasteles/fotopastel_2.jpg",
+        "precio":70,
+        "descripcion":"Pastel ideal para sentir un arcoiris dentro del cuerpo"
+    },
+    "Nube":{
+        "id":0,
+        "cover":"/Imagenes/pasteles/fotopastel_3.jpg",
+        "precio":450,
+        "descripcion":"Con esta pastel sentirás que vas volando"
+    },
+    "Afrodisiaco":{
+        "id":0,
+        "cover":"/Imagenes/pasteles/fotopastel_4.jpg",
+        "precio":660,
+        "descripcion":"Pastel hecho con las frutas mas diversas de los 7 mares"
+    },
+    "Siganshina":{
+        "id":0,
+        "cover":"/Imagenes/pasteles/fotopastel_5.jpg",
+        "precio":450,
+        "descripcion":"Pastel hecho de carne de titan recien cocinada"
+    },
+    "Diabetes":{
+        "id":0,
+        "cover":"/Imagenes/pasteles/fotopastel_6.jpg",
+        "precio":230,
+        "descripcion":"Pastel doble filo, es extremandamente delicioso pero tiene un alto precio"
+    },
+    "Macedonia":{
+        "id":0,
+        "cover":"/Imagenes/pasteles/fotopastel_7.jpg",
+        "precio":210,
+        "descripcion":"Pastel hecho con una gran diversidad de alimentos diferentes"
+    },
+    "Bee":{
+        "id":0,
+        "cover":"/Imagenes/pasteles/fotopastel_8.jpg",
+        "precio":10,
+        "descripcion":"Pastel pequeño pero maton, sin el no podrias vivir"
+    },
+    "Con amol":{
+        "id":0,
+        "cover":"/Imagenes/pasteles/fotopastel_9.jpg",
+        "precio":230,
+        "descripcion":"Pastel pensado par regalarselo a la yeni de tu barrio"
+    },
+    "Tarta de queso":{
+        "id":0,
+        "cover":"/Imagenes/pasteles/fotopastel_10.jpg",
+        "precio":550,
+        "descripcion":"Pastel ideal para combinar con arandanos"
+    }
+}

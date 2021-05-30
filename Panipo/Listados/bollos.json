@@ -1,0 +1,62 @@
+{
+    "Borbollon":{
+        "id":0,
+        "cover":"/Imagenes/bollos/fotobollo_1.jpg",
+        "precio":90,
+        "descripcion":"Bollos que han sido cocinados exclusivamente para la familia real"
+    },
+    "Rebollo":{
+        "id":0,
+        "cover":"/Imagenes/bollos/fotobollo_2.jpg",
+        "precio":70,
+        "descripcion":"Bollo real, solo para los verdaderos amantes de este"
+    },
+    "Bollicao":{
+        "id":0,
+        "cover":"/Imagenes/bollos/fotobollo_3.jpg",
+        "precio":60,
+        "descripcion":"Bollo de la infancia, si no lo has comido no se a que esperas"
+    },
+    "Bollitos de queso":{
+        "id":0,
+        "cover":"/Imagenes/bollos/fotobollo_4.jpg",
+        "precio":340,
+        "descripcion":"Bollos con queso?, si efectivamente, no te arrepentirás"
+    },
+    "Brioche de mascarpone":{
+        "id":0,
+        "cover":"/Imagenes/bollos/fotobollo_5.jpg",
+        "precio":50,
+        "descripcion":"No se que esto"
+    },
+    "Buñuelo":{
+        "id":0,
+        "cover":"/Imagenes/bollos/fotobollo_6.jpg",
+        "precio":780,
+        "descripcion":"Bollo especialmente sabroso gracias a su buñuelosidad"
+    },
+    "Mona de Pascua":{
+        "id":0,
+        "cover":"/Imagenes/bollos/fotobollo_7.jpg",
+        "precio":990,
+        "descripcion":"Bollo inventado por la familia de lso conejos de pascua"
+    },
+    "Bollos de canela":{
+        "id":0,
+        "cover":"/Imagenes/bollos/fotobollo_8.jpg",
+        "precio":30,
+        "descripcion":"Canelita en rama"
+    },
+    "Farolito":{
+        "id":0,
+        "cover":"/Imagenes/bollos/fotobollo_9.jpg",
+        "precio":340,
+        "descripcion":"Bollo que ilumnará tu camino allá donde vayas"
+    },
+    "Calzones rotos":{
+        "id":0,
+        "cover":"/Imagenes/bollos/fotobollo_10.jpg",
+        "precio":540,
+        "descripcion":"Bollo que traerá vergüenza a quien lo prepare"
+    }
+}

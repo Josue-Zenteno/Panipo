@@ -58,23 +58,24 @@
                     <ColumnDefinition Width="0*"/>
                 </Grid.ColumnDefinitions>
 
-                <StackPanel Orientation="Vertical" Name="First" Margin="20,20,0,43">
+                <StackPanel Orientation="Vertical" x:Name="First" Margin="20,0,0,43">
+                    <Button x:Name="btnVolver" CornerRadius="5" Background="#FF1F104F" Margin="0,0,0,10" Click="on_ClickReturnPanWindow">
+                        <FontIcon Glyph="&#xE751;" FontFamily="Segoe MDL2 Assets" FontSize="30"/>
+                    </Button>
+
                     <Image Source="{x:Bind Path=ventana_panes_info.cover_pan}"  HorizontalAlignment="Left" />
 
                     <StackPanel Orientation="Horizontal">
-                        <TextBlock x:Name="lblPrecioPan" FontSize="45" FontFamily="Verdana" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="0,0,70,0">
-                            <Run Text="{x:Bind Path=ventana_panes_info.precio_pan}"/>
-                            <Run Text="€"/>
-                        </TextBlock>
+                        <TextBlock x:Name="lblPrecioPan" FontSize="35" FontFamily="Verdana" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="0,0,35,0"><Run Text="{x:Bind Path=ventana_panes_info.precio_pan}"/><Run Text=" "/><Run Text="€"/></TextBlock>
                         <Button x:Name="btnCesta" CornerRadius="5" Margin="0,25,0,0" HorizontalAlignment="Right" Background="#FFFAA944">
                             <FontIcon Glyph="&#xE7BF;" FontFamily="Segoe MDL2 Assets" FontSize="30"/>
                         </Button>
                     </StackPanel>
 
                 </StackPanel>
-                <StackPanel Name="Second" Grid.Row="1" Margin="20,5,10,275" Grid.ColumnSpan="2">
+                <StackPanel x:Name="Second" Grid.Row="1" Margin="20,5,10,275" Grid.ColumnSpan="2">
                     <TextBlock x:Name="DetailDescriptionTextBlock" Text="{x:Bind Path=ventana_panes_info.nombre_pan}" 
-                           Foreground="White" FontSize="32" FontWeight="Bold" Height="42" Margin="0,5,0,0"
+                           Foreground="White" FontSize="32" FontWeight="Bold" Height="42" Margin="0,40,0,0"
                          
                            />
                     <TextBlock TextWrapping="Wrap" Foreground="White" Margin="0,15,0,0"><Run Text="{x:Bind Path=ventana_panes_info.descripcion_pan}"/></TextBlock>
@@ -88,11 +89,8 @@
                         <DataTemplate x:DataType="local:Pan">
                             <StackPanel HorizontalAlignment="Center">
 
-                                <Button HorizontalAlignment="Left" Height="175" Width="200">
-                                    <Button.Background>
-                                        <ImageBrush ImageSource="{x:Bind Path=cover_pan}" Stretch="UniformToFill"/>
-                                    </Button.Background>
-                                </Button>
+                                <Image
+                                    x:Name="imgPan" Source="{x:Bind cover_pan}" Height="175" Width="200" HorizontalAlignment="Left" Stretch="UniformToFill"/>
 
                             </StackPanel>
                         </DataTemplate>
@@ -105,6 +103,7 @@
 
 
         </ScrollViewer>
+        <Frame x:Name="ContentFrameProductDetails" Content=""/>
     </Grid>
 
 </Page>

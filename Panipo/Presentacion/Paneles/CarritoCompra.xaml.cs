@@ -15,32 +15,31 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
-// La plantilla de elemento Página en blanco está documentada en https://go.microsoft.com/fwlink/?LinkId=234238
 
 namespace Panipo
 {
-    /// <summary>
-    /// Una página vacía que se puede usar de forma independiente o a la que se puede navegar dentro de un objeto Frame.
-    /// </summary>
     public sealed partial class CarritoCompra : Page
     {
-
+        public static List<Pan> PANESCARRITOCOMPRA { get; set; }
         public List<Pan> panesCarritoCompra = Pan.GetListPanes();
 
         public CarritoCompra()
         {
             this.InitializeComponent();
+            PANESCARRITOCOMPRA = panesCarritoCompra;
         }
 
         private void FinalizarCompra_Click(object sender, RoutedEventArgs e)
         {
-            var toastContent = new ToastContent()
+            if (panesCarritoCompra.Count != 0)
             {
-                Visual = new ToastVisual()
+                var toastContent = new ToastContent()
                 {
-                    BindingGeneric = new ToastBindingGeneric()
+                    Visual = new ToastVisual()
                     {
-                        Children =
+                        BindingGeneric = new ToastBindingGeneric()
+                        {
+                            Children =
                         {
                             new AdaptiveText()
                             {
@@ -55,33 +54,35 @@ namespace Panipo
                                 Source = "Imagenes/panaderia.jpg"
                             }
                         },
-                        AppLogoOverride = new ToastGenericAppLogo()
-                        {
-                            Source = "Imagenes/marcaCorporativa.PNG",
-                            HintCrop = ToastGenericAppLogoCrop.Circle
+                            AppLogoOverride = new ToastGenericAppLogo()
+                            {
+                                Source = "Imagenes/marcaCorporativa.PNG",
+                                HintCrop = ToastGenericAppLogoCrop.Circle
+                            }
                         }
-                    }
-                },
-                Actions = new ToastActionsCustom()
-                {
-                    Buttons =
+                    },
+                    Actions = new ToastActionsCustom()
+                    {
+                        Buttons =
                     {
                         new ToastButton("Aceptar", "Aceptar")
                         {
                             ActivationType = ToastActivationType.Background
                         }
                     }
-                },
-                Launch = "Imagenes/marcaCorporativa.PNG"
-            };
+                    },
+                    Launch = "Imagenes/marcaCorporativa.PNG"
+                };
 
 
 
-            // Create the toast notification
-            var toastNotif = new ToastNotification(toastContent.GetXml());
+                // Create the toast notification
+                var toastNotif = new ToastNotification(toastContent.GetXml());
 
-            // And send the notification
-            ToastNotificationManager.CreateToastNotifier().Show(toastNotif);
+                // And send the notification
+                ToastNotificationManager.CreateToastNotifier().Show(toastNotif);
+            }
+            
         }
     }
 }

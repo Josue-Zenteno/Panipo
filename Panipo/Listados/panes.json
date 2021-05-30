@@ -1,0 +1,176 @@
+{
+    "Pan-demonium":{
+        "id":0,
+        "cover":"/Imagenes/panes/fotopan_1.jpg",
+        "precio":10,
+        "descripcion":"Pan hecho con la sangre de los demonios derrotados en combates legendarios de mas de 2 meses"
+    },
+    "Pan-dora":{
+        "id":0,
+        "cover":"/Imagenes/panes/fotopan_2.jpg",
+        "precio":100,
+        "descripcion":"Pan con el que tus expediciones serán mucho más amenas, podrás encontrar los caminos ocultos allá donde vayas. Pero cuidado con que no te lo roben."
+    },
+    "Pan-theon":{
+        "id":0,
+        "cover":"/Imagenes/panes/fotopan_3.jpg",
+        "precio":20,
+        "descripcion":"Pan horneado en los altos hornos del Monte Targón"
+    },
+    "Pan-fleto":{
+        "id":0,
+        "cover":"/Imagenes/panes/fotopan_4.jpg",
+        "precio":50,
+        "descripcion":"Pan tan fino como un folio, suele decirse que transporta grandes cantidades de conocimiento"
+    },
+    "Pan-za":{
+        "id":0,
+        "cover":"/Imagenes/panes/fotopan_5.jpg",
+        "precio":20,
+        "descripcion":"Pan creado para los amantes del deporte, con él se sentirán completamente saciados durante meses"
+    },
+    "Pan-dorga":{
+        "id":0,
+        "cover":"/Imagenes/panes/fotopan_6.jpg",
+        "precio":200,
+        "descripcion":"Pan hecho para ocasiones especiales"
+    },
+    "Pan-sexual":{
+        "id":0,
+        "cover":"/Imagenes/panes/fotopan_7.jpg",
+        "precio":140,
+        "descripcion":"Pan ideal para acompañar en veladas especiales"
+    },
+    "Pan-padilla":{
+        "id":0,
+        "cover":"/Imagenes/panes/fotopan_8.jpg",
+        "precio":20,
+        "descripcion":"Pan Pensado para pinchar"
+    },
+    "Pan-demia":{
+        "id":0,
+        "cover":"/Imagenes/panes/fotopan_9.jpg",
+        "precio":30,
+        "descripcion":"Pan de renombre conocido mundialmente, te comes uno y no quieres más"
+    },
+    "Pan-filo":{
+        "id":0,
+        "cover":"/Imagenes/panes/fotopan_10.jpg",
+        "precio":50,
+        "descripcion":"Pan fácil de digerir, ni se entera de que te lo estas comiendo"
+    },
+    "Pan-ocha":{
+        "id":0,
+        "cover":"/Imagenes/panes/fotopan_11.jpg",
+        "precio":70,
+        "descripcion":"Pan deseado por muchos jovenes, rico en nutrientes, disfrutarás de cada bocado"
+    },
+    "Pan-ceta":{
+        "id":0,
+        "cover":"/Imagenes/panes/fotopan_12.jpg",
+        "precio":90,
+        "descripcion":"Pan ideal para acompañar comidas ricas en carnes a la parrilla"
+    },
+    "Pan-tufla":{
+        "id":0,
+        "cover":"/Imagenes/panes/fotopan_13.jpg",
+        "precio":670,
+        "descripcion":"Pan pensado para estar por casa"
+    },
+    "Pan-talon":{
+        "id":0,
+        "cover":"/Imagenes/panes/fotopan_14.jpg",
+        "precio":760,
+        "descripcion":"Pan extremadamente delicioso, pero cuidado porque mancha mucho la ropa."
+    },
+    "Pan-thanos":{
+        "id":0,
+        "cover":"/Imagenes/panes/fotopan_15.jpg",
+        "precio":450,
+        "descripcion":"Pan hecho con los cereales del infinito, te hacen sentir inevitablemente poderoso"
+    },
+    "Pan-cho":{
+        "id":0,
+        "cover":"/Imagenes/panes/fotopan_16.jpg",
+        "precio":230,
+        "descripcion":"Pan relleno de queso y nachos"
+    },
+    "Pan-da":{
+        "id":0,
+        "cover":"/Imagenes/panes/fotopan_17.jpg",
+        "precio":220,
+        "descripcion":"Pan hecho con cerelaes bicolor, balncos y negros a partes iguales"
+    },
+    "Pan-ico":{
+        "id":0,
+        "cover":"/Imagenes/panes/fotopan_18.jpg",
+        "precio":210,
+        "descripcion":"Pan que causa horribles pesadillas a todos aquellos que lo consumen, pero otorgan invulnerabilidad antes sustos"
+    },
+    "Pan-tera":{
+        "id":0,
+        "cover":"/Imagenes/panes/fotopan_19.jpg",
+        "precio":100,
+        "descripcion":"Pan elegante, sutil y rápido de digerir"
+    },
+    "Pan-creas":{
+        "id":0,
+        "cover":"/Imagenes/panes/fotopan_20.jpg",
+        "precio":120,
+        "descripcion":"Pan ideal para generar hormonas"
+    },
+    "Pan-zer":{
+        "id":0,
+        "cover":"/Imagenes/panes/fotopan_21.jpg",
+        "precio":150,
+        "descripcion":"Pan pensado para las duras batallas contra el ejercito enemigo"
+    },
+    "Pan-ita":{
+        "id":0,
+        "cover":"/Imagenes/panes/fotopan_22.jpg",
+        "precio":70,
+        "descripcion":"Pan ideal para compartir con los colegas"
+    },
+    "Pan-orama":{
+        "id":0,
+        "cover":"/Imagenes/panes/fotopan_23.jpg",
+        "precio":50,
+        "descripcion":"Pan que te hace ver como son las cosas de manera general"
+    },
+    "Pan-ojitos":{
+        "id":0,
+        "cover":"/Imagenes/panes/fotopan_24.jpg",
+        "precio":10,
+        "descripcion":"Pan con sabor a panojitos, cualquier coincidencia es casualidad"
+    },
+    "Pan-talla":{
+        "id":0,
+        "cover":"/Imagenes/panes/fotopan_25.jpg",
+        "precio":50,
+        "descripcion":"Pan ideal para las noches de futbol"
+    },
+    "Pan-cracio":{
+        "id":0,
+        "cover":"/Imagenes/panes/fotopan_26.jpg",
+        "precio":60,
+        "descripcion":"Pan extinto"
+    },
+    "Pan-a":{
+        "id":0,
+        "cover":"/Imagenes/panes/fotopan_27.jpg",
+        "precio":70,
+        "descripcion":"Pan perfecto para una tarde de amigos"
+    },
+    "Pan-carta":{
+        "id":0,
+        "cover":"/Imagenes/panes/fotopan_28.jpg",
+        "precio":80,
+        "descripcion":"Pan de gran tamaño que contiene un mensaje significativo"
+    },
+    "Pan-tomima":{
+        "id":0,
+        "cover":"/Imagenes/panes/fotopan_29.jpg",
+        "precio":90,
+        "descripcion":"Full"
+    }
+}

@@ -15,6 +15,13 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
+using Windows.Media.SpeechRecognition;
+using Windows.ApplicationModel.VoiceCommands;
+using Windows.Storage;
+
+using System.Diagnostics;
+using Windows.UI.Popups;
+
 namespace Panipo
 {
     /// <summary>
@@ -37,7 +44,7 @@ namespace Panipo
         /// de entrada cuando la aplicación se inicie para abrir un archivo específico, por ejemplo.
         /// </summary>
         /// <param name="e">Información detallada acerca de la solicitud y el proceso de inicio.</param>
-        protected override void OnLaunched(LaunchActivatedEventArgs e)
+        protected async override void OnLaunched(LaunchActivatedEventArgs e)
         {
             Frame rootFrame = Window.Current.Content as Frame;
 
@@ -57,6 +64,7 @@ namespace Panipo
 
                 // Poner el marco en la ventana actual.
                 Window.Current.Content = rootFrame;
+
             }
 
             if (e.PrelaunchActivated == false)
@@ -70,8 +78,46 @@ namespace Panipo
                 }
                 // Asegurarse de que la ventana actual está activa.
                 Window.Current.Activate();
+
+                try
+                {
+                    StorageFile vcd = await Package.Current.InstalledLocation.GetFileAsync(@"CustomVoiceDefinitions.xml");
+                    await VoiceCommandDefinitionManager.InstallCommandDefinitionsFromStorageFileAsync(vcd);
+                }
+                catch (Exception ex)
+                {
+                    Debug.Write("Failed to register custom voice due to: " + ex.Message);
+                }
             }
         }
+
+        protected async override void OnActivated(IActivatedEventArgs args)
+        {
+            base.OnActivated(args);
+
+            if (args.Kind == ActivationKind.VoiceCommand)
+            {
+                VoiceCommandActivatedEventArgs cmd = args as VoiceCommandActivatedEventArgs;
+                SpeechRecognitionResult result = cmd.Result;
+
+                string commandName = result.RulePath[0];
+
+                MessageDialog dialog = new MessageDialog("");
+
+                switch (commandName)
+                {
+                    case "OpenApplication":
+                        dialog.Content = "Bienvenido a la tienda online de PanIPO";
+                        break;
+                    default:
+                        Debug.WriteLine("Such command does not exists");
+                        break;
+
+                }
+                await dialog.ShowAsync();
+            }
+        }
+
 
         /// <summary>
         /// Se invoca cuando la aplicación la inicia normalmente el usuario final. Se usarán otros puntos
@@ -96,5 +142,7 @@ namespace Panipo
             //TODO: Guardar el estado de la aplicación y detener toda actividad en segundo plano
             deferral.Complete();
         }
+
+
     }
 }

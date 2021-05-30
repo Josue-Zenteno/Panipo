@@ -119,6 +119,14 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Persistencia\ComponentesManager.cs" />
+    <Compile Include="Dominio\Componentes.cs" />
+    <Compile Include="Presentacion\Paneles\DetallesProductoBollos.xaml.cs">
+      <DependentUpon>DetallesProductoBollos.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Paneles\DetallesProductoPasteles.xaml.cs">
+      <DependentUpon>DetallesProductoPasteles.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Presentacion\Paneles\Bollos.xaml.cs">
       <DependentUpon>Bollos.xaml</DependentUpon>
     </Compile>
@@ -159,6 +167,7 @@
     <Compile Include="Presentacion\Paneles\SobreNosotros.xaml.cs">
       <DependentUpon>SobreNosotros.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Persistencia\UsuariosManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
@@ -211,13 +220,63 @@
     <Content Include="Assets\Wide310x150Logo.scale-125.png" />
     <Content Include="Assets\Wide310x150Logo.scale-150.png" />
     <Content Include="Assets\Wide310x150Logo.scale-400.png" />
+    <Content Include="CustomCortanaDefinitions.xml" />
+    <Content Include="Imagenes\bollos\fotobollo_1.jpg" />
+    <Content Include="Imagenes\bollos\fotobollo_10.jpg" />
+    <Content Include="Imagenes\bollos\fotobollo_2.jpg" />
+    <Content Include="Imagenes\bollos\fotobollo_3.jpg" />
+    <Content Include="Imagenes\bollos\fotobollo_4.jpg" />
+    <Content Include="Imagenes\bollos\fotobollo_5.jpg" />
+    <Content Include="Imagenes\bollos\fotobollo_6.jpg" />
+    <Content Include="Imagenes\bollos\fotobollo_7.jpg" />
+    <Content Include="Imagenes\bollos\fotobollo_8.jpg" />
+    <Content Include="Imagenes\bollos\fotobollo_9.jpg" />
     <Content Include="Imagenes\fondomenu.PNG" />
     <Content Include="Imagenes\lupa.png" />
     <Content Include="Imagenes\marcaCorporativa.PNG" />
     <Content Include="Imagenes\panaderia.jpg" />
     <Content Include="Imagenes\panaderi_inicio_sesion.jpg" />
+    <Content Include="Imagenes\panes\fotopan_1.jpg" />
+    <Content Include="Imagenes\panes\fotopan_10.jpg" />
+    <Content Include="Imagenes\panes\fotopan_11.jpg" />
+    <Content Include="Imagenes\panes\fotopan_12.jpg" />
+    <Content Include="Imagenes\panes\fotopan_13.jpg" />
+    <Content Include="Imagenes\panes\fotopan_14.jpg" />
+    <Content Include="Imagenes\panes\fotopan_15.jpg" />
+    <Content Include="Imagenes\panes\fotopan_16.jpg" />
+    <Content Include="Imagenes\panes\fotopan_17.jpg" />
+    <Content Include="Imagenes\panes\fotopan_18.jpg" />
+    <Content Include="Imagenes\panes\fotopan_19.jpg" />
+    <Content Include="Imagenes\panes\fotopan_2.jpg" />
+    <Content Include="Imagenes\panes\fotopan_20.jpg" />
+    <Content Include="Imagenes\panes\fotopan_21.jpg" />
+    <Content Include="Imagenes\panes\fotopan_22.jpg" />
+    <Content Include="Imagenes\panes\fotopan_23.jpg" />
+    <Content Include="Imagenes\panes\fotopan_24.jpg" />
+    <Content Include="Imagenes\panes\fotopan_25.jpg" />
+    <Content Include="Imagenes\panes\fotopan_26.jpg" />
+    <Content Include="Imagenes\panes\fotopan_27.jpg" />
+    <Content Include="Imagenes\panes\fotopan_28.jpg" />
+    <Content Include="Imagenes\panes\fotopan_29.jpg" />
+    <Content Include="Imagenes\panes\fotopan_3.jpg" />
+    <Content Include="Imagenes\panes\fotopan_4.jpg" />
+    <Content Include="Imagenes\panes\fotopan_5.jpg" />
+    <Content Include="Imagenes\panes\fotopan_6.jpg" />
+    <Content Include="Imagenes\panes\fotopan_7.jpg" />
+    <Content Include="Imagenes\panes\fotopan_8.jpg" />
+    <Content Include="Imagenes\panes\fotopan_9.jpg" />
     <Content Include="Imagenes\pan_molde.jpg" />
     <Content Include="Imagenes\pan_tostado.jpg" />
+    <Content Include="Imagenes\pasteles\fotopastel_1.jpg" />
+    <Content Include="Imagenes\pasteles\fotopastel_10.jpg" />
+    <Content Include="Imagenes\pasteles\fotopastel_2.jpg" />
+    <Content Include="Imagenes\pasteles\fotopastel_3.jpg" />
+    <Content Include="Imagenes\pasteles\fotopastel_4.jpg" />
+    <Content Include="Imagenes\pasteles\fotopastel_5.jpg" />
+    <Content Include="Imagenes\pasteles\fotopastel_6.jpg" />
+    <Content Include="Imagenes\pasteles\fotopastel_7.jpg" />
+    <Content Include="Imagenes\pasteles\fotopastel_8.jpg" />
+    <Content Include="Imagenes\pasteles\fotopastel_9.jpg" />
     <Content Include="Imagenes\perfil.png" />
     <Content Include="Imagenes\perfilGuada.jpg" />
     <Content Include="Imagenes\perfilJosu.jpg" />
@@ -239,6 +298,14 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="Presentacion\Paneles\DetallesProductoBollos.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Presentacion\Paneles\DetallesProductoPasteles.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Presentacion\Paneles\Bollos.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -295,7 +362,24 @@
       <Version>13.0.1</Version>
     </PackageReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Assets\bollo.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Listados\bollos.json" />
+    <Content Include="Listados\panes.json" />
+    <Content Include="Listados\pasteles.json" />
+    <Content Include="Listados\usuarios.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\pan.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\pastel.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\sobreNosotros.ttf" />
+  </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>

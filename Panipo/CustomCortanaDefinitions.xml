@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<VoiceCommands xmlns="http://schemas.microsoft.com/voicecommands/1.2">
+  <CommandSet xml:lang="en-us" Name="CustomCommands">
+    <CommandPrefix> Listen Up </CommandPrefix>
+    <Example> Open Application</Example>
+
+    <Command Name="OpenApplication">
+      <Example> Open Application, Open PanIPO </Example>
+      <ListenFor> Open PanIPO </ListenFor>
+      <Feedback> Opening your IPO lab Application </Feedback>
+      <Navigate/>
+    </Command>
+
+  </CommandSet>
+
+</VoiceCommands>

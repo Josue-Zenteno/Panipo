@@ -20,11 +20,11 @@
                     <Grid Name="GridPanel" Height="175" Width="200" >
 
                         <Image
-                            x:Name="imgPan" Source="{x:Bind cover_bollo}"  Height="175" Width="200" Stretch="UniformToFill"/>
+                            x:Name="imgPan" Source="{x:Bind cover_bollo}"  Height="175" Width="200" Stretch="UniformToFill" HorizontalAlignment="Left"/>
 
                         <Button HorizontalAlignment="Left" Height="175" Width="200">
                             <Button.Background>
-                                <ImageBrush ImageSource="{x:Bind Path=cover_bollo}" Stretch="UniformToFill"/>
+                                <ImageBrush ImageSource="{x:Bind Path=cover_bollo}" Stretch="UniformToFill" AlignmentX="Left"/>
                             </Button.Background>
                         </Button>
 

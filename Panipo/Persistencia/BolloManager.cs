@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
+using System.IO;
 
 namespace Panipo
 {
@@ -14,110 +17,30 @@ namespace Panipo
 
             var bollos= new List<Bollo>();
 
-            bollos.Add(new Bollo
+            JObject jsonBollos = JObject.Parse(File.ReadAllText("./Listados/bollos.json"));
+
+            Dictionary<string, Dictionary<string, string>> dictBollos = jsonBollos.ToObject<Dictionary<string, Dictionary<string, string>>>();
+
+            foreach (KeyValuePair<string, Dictionary<string, string>> bollo in dictBollos)
             {
-                id_bollo = 1,
-                nombre_bollo = "Pan de molde",
-                cover_bollo = "/Imagenes/pan_molde.jpg",
-                precio_bollo = 3.2,
-                descripcion_bollo = "Descripcion del pan 1"
-            });
-            bollos.Add(new Bollo
-            {
-                id_bollo = 2,
-                nombre_bollo = "Pan de sésamo",
-                cover_bollo = "/Imagenes/marcaCorporativa.PNG",
-                precio_bollo = 3.2,
-                descripcion_bollo = "Descripcion del pan 2"
-            });
-            bollos.Add(new Bollo
-            {
-                id_bollo = 3,
-                nombre_bollo = "Pan tostado",
-                cover_bollo = "/Imagenes/pan_tostado.jpg",
-                precio_bollo = 5.0,
-                descripcion_bollo = "Descripcion del pan 3"
-            });
-            bollos.Add(new Bollo
-            {
-                id_bollo = 4,
-                nombre_bollo = "Pan pan",
-                cover_bollo = "/Imagenes/marcaCorporativa.PNG",
-                precio_bollo = 3.2,
-                descripcion_bollo = "Descripcion del pan 4"
-            });
-            bollos.Add(new Bollo
-            {
-                id_bollo = 5,
-                nombre_bollo = "Pan de mercadona",
-                cover_bollo = "/Imagenes/marcaCorporativa.PNG",
-                precio_bollo = 3.2,
-                descripcion_bollo = "Descripcion del pan 5"
-            });
-            bollos.Add(new Bollo
-            {
-                id_bollo = 6,
-                nombre_bollo = "Pan ejemplo",
-                cover_bollo = "/Imagenes/marcaCorporativa.PNG",
-                precio_bollo = 3.2,
-                descripcion_bollo = "Descripcion del pan 6"
-            });
-            bollos.Add(new Bollo
-            {
-                id_bollo = 6,
-                nombre_bollo = "Pan ejemplo",
-                cover_bollo = "/Imagenes/marcaCorporativa.PNG",
-                precio_bollo = 3.2,
-                descripcion_bollo = "Descripcion del pan 6"
-            });
-            bollos.Add(new Bollo
-            {
-                id_bollo = 6,
-                nombre_bollo = "Pan ejemplo",
-                cover_bollo = "/Imagenes/marcaCorporativa.PNG",
-                precio_bollo = 3.2,
-                descripcion_bollo = "Descripcion del pan 6"
-            });
-            bollos.Add(new Bollo
-            {
-                id_bollo = 6,
-                nombre_bollo = "Pan ejemplo",
-                cover_bollo = "/Imagenes/marcaCorporativa.PNG",
-                precio_bollo = 3.2,
-                descripcion_bollo = "Descripcion del pan 6"
-            });
-            bollos.Add(new Bollo
-            {
-                id_bollo = 6,
-                nombre_bollo = "Pan ejemplo",
-                cover_bollo = "/Imagenes/marcaCorporativa.PNG",
-                precio_bollo = 3.2,
-                descripcion_bollo = "Descripcion del pan 6"
-            });
-            bollos.Add(new Bollo
-            {
-                id_bollo = 6,
-                nombre_bollo = "Pan ejemplo",
-                cover_bollo = "/Imagenes/marcaCorporativa.PNG",
-                precio_bollo = 3.2,
-                descripcion_bollo = "Descripcion del pan 6"
-            });
-            bollos.Add(new Bollo
-            {
-                id_bollo = 6,
-                nombre_bollo = "Pan ejemplo",
-                cover_bollo = "/Imagenes/marcaCorporativa.PNG",
-                precio_bollo = 3.2,
-                descripcion_bollo = "Descripcion del pan 6"
-            });
-            bollos.Add(new Bollo
-            {
-                id_bollo = 6,
-                nombre_bollo = "Pan ejemplo",
-                cover_bollo = "/Imagenes/marcaCorporativa.PNG",
-                precio_bollo = 3.2,
-                descripcion_bollo = "Descripcion del pan 6"
-            });
+                List<KeyValuePair<string, string>> contenido = new List<KeyValuePair<string, string>>();
+
+                string nombre = bollo.Key;
+
+                foreach (KeyValuePair<string, string> kvp in bollo.Value)
+                {
+                    contenido.Add(kvp);
+                }
+
+                bollos.Add(new Bollo
+                {
+                    id_bollo = int.Parse(contenido.ElementAt(0).Value),
+                    nombre_bollo = nombre,
+                    cover_bollo = contenido.ElementAt(1).Value,
+                    precio_bollo = int.Parse(contenido.ElementAt(2).Value),
+                    descripcion_bollo = contenido.ElementAt(3).Value
+                });
+            }
 
             return bollos;
 

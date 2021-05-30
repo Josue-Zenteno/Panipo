@@ -14,15 +14,15 @@
 
             <StackPanel Orientation="Horizontal" Background="#FF534D4D" Margin="2,0,0,0" FlowDirection="RightToLeft">
 
-                <Button x:Name="btnCerrarSesion" Margin="20,0,0,0" Background="{x:Null}" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" ToolTipService.ToolTip="Cerrar Sesion"  Visibility="Collapsed" Click="CerrarSesion_Click">
+                <Button x:Name="btnCerrarSesion" x:FieldModifier="public" Margin="20,0,0,0" Background="{x:Null}" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" ToolTipService.ToolTip="Cerrar Sesion"  Visibility="Collapsed" Click="CerrarSesion_Click">
                     <FontIcon Glyph="&#xE77B;" FontFamily="Segoe MDL2 Assets" FontSize="20"/>
                 </Button>
 
-                <Button x:Name="btnIniciarSesion" Margin="20,0,0,0" Background="{x:Null}" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" ToolTipService.ToolTip="Iniciar Sesion" Click="IniciarSesion_Click">
+                <Button x:Name="btnIniciarSesion" x:FieldModifier="public" Margin="20,0,0,0" Background="{x:Null}" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" ToolTipService.ToolTip="Iniciar Sesion" Click="IniciarSesion_Click">
                     <FontIcon Glyph="&#xE77B;" FontFamily="Segoe MDL2 Assets" FontSize="20"/>
                 </Button>
 
-                <Button x:Name="btnCarritoCompra" Margin="20,0,0,0" Background="{x:Null}" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" ToolTipService.ToolTip="Mi Carrito" Click="CarritoCompra_Click">
+                <Button x:Name="btnCarritoCompra" x:FieldModifier="public" Margin="20,0,0,0" Background="{x:Null}" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" ToolTipService.ToolTip="Mi Carrito" Click="CarritoCompra_Click" Visibility="Collapsed">
                     <FontIcon Glyph="&#xE7BF;" FontFamily="Segoe MDL2 Assets" FontSize="20"/>
                 </Button>
 
@@ -70,28 +70,28 @@
 
                     <ListBoxItem x:Name="PanesListBoxItem" ToolTipService.ToolTip="Panes">
                         <StackPanel Orientation="Horizontal">
-                            <TextBlock FontFamily="Segoe MDL2 Assets" FontSize="28" Text="&#xEC09;" />
+                            <TextBlock FontFamily="pan" FontSize="28" Text="&#xE900;" />
                             <TextBlock Text="Panes" FontSize="24" Margin="20,0,0,0"  />
                         </StackPanel>
                     </ListBoxItem>
 
                     <ListBoxItem x:Name="PastelesListBoxItem" ToolTipService.ToolTip="Pasteles">
                         <StackPanel Orientation="Horizontal">
-                            <TextBlock FontFamily="Segoe MDL2 Assets" FontSize="28" Text="&#xEC09;" />
+                            <TextBlock FontFamily="pastel" FontSize="28" Text="&#xE902;" />
                             <TextBlock Text="Pasteles" FontSize="24" Margin="20,0,0,0"  />
                         </StackPanel>
                     </ListBoxItem>
 
                     <ListBoxItem x:Name="BollosListBoxItem" ToolTipService.ToolTip="Bollos">
                         <StackPanel Orientation="Horizontal">
-                            <TextBlock FontFamily="Segoe MDL2 Assets" FontSize="28" Text="&#xEC09;" />
+                            <TextBlock FontFamily="bollo" FontSize="28" Text="&#xE901;" />
                             <TextBlock Text="Bollos" FontSize="24" Margin="20,0,0,0"  />
                         </StackPanel>
                     </ListBoxItem>
 
                     <ListBoxItem x:Name="AboutUsListBoxItem">
                         <StackPanel Orientation="Horizontal">
-                            <TextBlock FontFamily="Segoe MDL2 Assets" FontSize="28" Text="&#xF142;" />
+                            <TextBlock FontFamily="sobreNosotros" FontSize="28" Text="&#xE900;" />
                             <TextBlock Text="Sobre Nosotros" FontSize="24" Margin="20,0,0,0" ToolTipService.ToolTip="Sobre Nosotros"  />
                         </StackPanel>
                     </ListBoxItem>

@@ -18,9 +18,6 @@ using Windows.UI.Xaml.Navigation;
 
 namespace Panipo
 {
-    /// <summary>
-    /// Una página vacía que se puede usar de forma independiente o a la que se puede navegar dentro de un objeto Frame.
-    /// </summary>
     public sealed partial class Panes : Page
     {
 
@@ -28,41 +25,19 @@ namespace Panipo
         public static Pan panes_info;
         public Image imgPan = new Image();
 
-
-
         public Panes()
         {
-
-            this.InitializeComponent();
-
-            //lista_panes = PanManager.GetPanes();
-            //inicializarPanes();
-
+           this.InitializeComponent();
         }
 
         public void GridView_ItemClick(object sender, ItemClickEventArgs e)
         {
+
             var panes = (Pan)e.ClickedItem;
             panes_info = panes;
-            c.Navigate(typeof(DetallesProducto));
-        }
-
-        private void on_click(object sender, RoutedEventArgs e)
-        {
-
-
-            c.Navigate(typeof(DetallesProducto));
+            ContentFramePan.Navigate(typeof(DetallesProducto));
 
         }
 
-        /**
-        public void inicializarPanes() {
-            
-            lista_panes = PanManager.GetPanes();
-            foreach(Pan item in lista_panes) {
-                //this.listViewPanes.Items.Add("Nombre: " + item.nombre_pan);
-            }
-        }
-       */
     }
 }

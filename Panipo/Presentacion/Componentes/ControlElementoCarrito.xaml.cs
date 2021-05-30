@@ -13,8 +13,6 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
-// La plantilla de elemento Control de usuario está documentada en https://go.microsoft.com/fwlink/?LinkId=234236
-
 namespace Panipo
 {
     public sealed partial class ControlElementoCarrito : UserControl
@@ -44,7 +42,6 @@ namespace Panipo
             set { imgCoverPan.Source = value; }
         }
 
-
         public static readonly DependencyProperty PropertyNombrePan = DependencyProperty.Register(nameof(NombrePan), 
             typeof(string), typeof(ControlElementoCarrito), new PropertyMetadata(string.Empty));
 
@@ -61,5 +58,6 @@ namespace Panipo
         {
             this.InitializeComponent();
         }
+
     }
 }

@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
+using System.IO;
 
 namespace Panipo
 {
@@ -15,110 +18,30 @@ namespace Panipo
 
             var pasteles = new List<Pastel>();
 
-            pasteles.Add(new Pastel
+            JObject jsonPasteles = JObject.Parse(File.ReadAllText("./Listados/pasteles.json"));
+
+            Dictionary<string, Dictionary<string, string>> dictPasteles = jsonPasteles.ToObject<Dictionary<string, Dictionary<string, string>>>();
+
+            foreach (KeyValuePair<string, Dictionary<string, string>> pastel in dictPasteles)
             {
-                id_pastel = 1,
-                nombre_pastel = "Pan de molde",
-                cover_pastel = "/Imagenes/pan_molde.jpg",
-                precio_pastel = 3.2,
-                descripcion_pastel = "Descripcion del pan 1"
-            });
-            pasteles.Add(new Pastel
-            {
-                id_pastel = 2,
-                nombre_pastel = "Pan de sésamo",
-                cover_pastel = "/Imagenes/marcaCorporativa.PNG",
-                precio_pastel = 3.2,
-                descripcion_pastel = "Descripcion del pan 2"
-            });
-            pasteles.Add(new Pastel
-            {
-                id_pastel = 3,
-                nombre_pastel = "Pan tostado",
-                cover_pastel = "/Imagenes/pan_tostado.jpg",
-                precio_pastel = 5.0,
-                descripcion_pastel = "Descripcion del pan 3"
-            });
-            pasteles.Add(new Pastel
-            {
-                id_pastel = 4,
-                nombre_pastel = "Pan pan",
-                cover_pastel = "/Imagenes/marcaCorporativa.PNG",
-                precio_pastel = 3.2,
-                descripcion_pastel = "Descripcion del pan 4"
-            });
-            pasteles.Add(new Pastel
-            {
-                id_pastel = 5,
-                nombre_pastel = "Pan de mercadona",
-                cover_pastel = "/Imagenes/marcaCorporativa.PNG",
-                precio_pastel = 3.2,
-                descripcion_pastel = "Descripcion del pan 5"
-            });
-            pasteles.Add(new Pastel
-            {
-                id_pastel = 6,
-                nombre_pastel = "Pan ejemplo",
-                cover_pastel = "/Imagenes/marcaCorporativa.PNG",
-                precio_pastel = 3.2,
-                descripcion_pastel = "Descripcion del pan 6"
-            });
-            pasteles.Add(new Pastel
-            {
-                id_pastel = 6,
-                nombre_pastel = "Pan ejemplo",
-                cover_pastel = "/Imagenes/marcaCorporativa.PNG",
-                precio_pastel = 3.2,
-                descripcion_pastel = "Descripcion del pan 6"
-            });
-            pasteles.Add(new Pastel
-            {
-                id_pastel = 6,
-                nombre_pastel = "Pan ejemplo",
-                cover_pastel = "/Imagenes/marcaCorporativa.PNG",
-                precio_pastel = 3.2,
-                descripcion_pastel = "Descripcion del pan 6"
-            });
-            pasteles.Add(new Pastel
-            {
-                id_pastel = 6,
-                nombre_pastel = "Pan ejemplo",
-                cover_pastel = "/Imagenes/marcaCorporativa.PNG",
-                precio_pastel = 3.2,
-                descripcion_pastel = "Descripcion del pan 6"
-            });
-            pasteles.Add(new Pastel
-            {
-                id_pastel = 6,
-                nombre_pastel = "Pan ejemplo",
-                cover_pastel = "/Imagenes/marcaCorporativa.PNG",
-                precio_pastel = 3.2,
-                descripcion_pastel = "Descripcion del pan 6"
-            });
-            pasteles.Add(new Pastel
-            {
-                id_pastel = 6,
-                nombre_pastel = "Pan ejemplo",
-                cover_pastel = "/Imagenes/marcaCorporativa.PNG",
-                precio_pastel = 3.2,
-                descripcion_pastel = "Descripcion del pan 6"
-            });
-            pasteles.Add(new Pastel
-            {
-                id_pastel = 6,
-                nombre_pastel = "Pan ejemplo",
-                cover_pastel = "/Imagenes/marcaCorporativa.PNG",
-                precio_pastel = 3.2,
-                descripcion_pastel = "Descripcion del pan 6"
-            });
-            pasteles.Add(new Pastel
-            {
-                id_pastel = 6,
-                nombre_pastel = "Pan ejemplo",
-                cover_pastel = "/Imagenes/marcaCorporativa.PNG",
-                precio_pastel = 3.2,
-                descripcion_pastel = "Descripcion del pan 6"
-            });
+                List<KeyValuePair<string, string>> contenido = new List<KeyValuePair<string, string>>();
+
+                string nombre = pastel.Key;
+
+                foreach (KeyValuePair<string, string> kvp in pastel.Value)
+                {
+                    contenido.Add(kvp);
+                }
+
+                pasteles.Add(new Pastel
+                {
+                    id_pastel = int.Parse(contenido.ElementAt(0).Value),
+                    nombre_pastel = nombre,
+                    cover_pastel = contenido.ElementAt(1).Value,
+                    precio_pastel = int.Parse(contenido.ElementAt(2).Value),
+                    descripcion_pastel = contenido.ElementAt(3).Value
+                });
+            }
 
             return pasteles;
 

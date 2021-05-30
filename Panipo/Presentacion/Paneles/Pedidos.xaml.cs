@@ -16,14 +16,9 @@ using Windows.UI.Xaml.Navigation;
 using Microsoft.Toolkit.Uwp.Notifications;
 using Windows.UI.Notifications;
 
-// La plantilla de elemento Página en blanco está documentada en https://go.microsoft.com/fwlink/?LinkId=234238
-
 namespace Panipo
 {
 
-    /// <summary>
-    /// Una página vacía que se puede usar de forma independiente o a la que se puede navegar dentro de un objeto Frame.
-    /// </summary>
     public sealed partial class Pedidos : Page
     {
 
@@ -34,18 +29,7 @@ namespace Panipo
 
             this.InitializeComponent();
 
-            //inicializarPedidos();
-
         }
-        /**
-        public void inicializarPedidos() {
-            lista_panes = PanManager.GetPanes();
-      
-            foreach (Pan item in lista_panes) {
-                this.LstPedidos.Items.Add("Nombre: " + item.nombre_pan);
-            }
-        }
-        */
 
         private void btnComprarNoti(object sender, RoutedEventArgs e)
         {

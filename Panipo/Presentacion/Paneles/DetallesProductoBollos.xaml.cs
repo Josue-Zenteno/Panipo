@@ -1,0 +1,38 @@
+﻿using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Runtime.InteropServices.WindowsRuntime;
+using Windows.Foundation;
+using Windows.Foundation.Collections;
+using Windows.UI.Xaml;
+using Windows.UI.Xaml.Controls;
+using Windows.UI.Xaml.Controls.Primitives;
+using Windows.UI.Xaml.Data;
+using Windows.UI.Xaml.Input;
+using Windows.UI.Xaml.Media;
+using Windows.UI.Xaml.Navigation;
+
+namespace Panipo.Presentacion.Paneles
+{
+
+    public sealed partial class DetallesProductoBollos : Page
+    {
+        public Bollo ventana_bollos_info = Bollos.bollos_info;
+        public List<Bollo> lista_bollos_info = Bollo.GetListBollos();
+
+        public DetallesProductoBollos()
+        {
+            this.InitializeComponent();
+            this.Visibility = Visibility.Visible;
+
+        }
+
+        private void on_ClickReturnPanWindow(object sender, RoutedEventArgs e)
+        {
+            this.Visibility = Visibility.Collapsed;
+            ContentFrameProductDetails.Navigate(typeof(Bollos));
+
+        }
+    }
+}

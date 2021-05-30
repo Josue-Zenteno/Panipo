@@ -18,26 +18,37 @@ namespace Panipo
 {
     public sealed partial class MainPage : Page
     {
+
+        public static Button ButtonCarritocompra { get; set; }
+        public static Button ButtonIniciarSesion { get; set; }
+        public static Button ButtonCerrarSesion { get; set; }
+        public static Frame ContentFrameMainPage { get; set; }
+
         public MainPage()
         {
             this.InitializeComponent();
-            Windows.UI.ViewManagement.ApplicationView.GetForCurrentView().SetPreferredMinSize(new Size(700,1000));
+            Windows.UI.ViewManagement.ApplicationView.GetForCurrentView().SetPreferredMinSize(new Size(500,500));
             Windows.UI.ViewManagement.ApplicationView.GetForCurrentView().VisibleBoundsChanged += Ventana_Resize;
             
             listBoxSecciones.SelectedIndex = 0;
             ContentFrame.Navigate(typeof(Inicio));
+
+            ButtonCarritocompra = btnCarritoCompra;
+            ButtonIniciarSesion = btnIniciarSesion;
+            ButtonCerrarSesion = btnCerrarSesion;
+            ContentFrameMainPage = ContentFrame;
         }
 
         private void Ventana_Resize(Windows.UI.ViewManagement.ApplicationView sender, object args)
         {
             var Width = Windows.UI.ViewManagement.ApplicationView.GetForCurrentView().VisibleBounds.Width;
 
-            if (Width >= 720)
+            if (Width >= 920)
             {
                 svMenu.DisplayMode = SplitViewDisplayMode.CompactInline;
                 svMenu.IsPaneOpen = true;
             }
-            else if (Width >= 360)
+            else if (Width >= 600)
             {
                 svMenu.DisplayMode = SplitViewDisplayMode.CompactOverlay;
                 svMenu.IsPaneOpen = false;
@@ -94,10 +105,7 @@ namespace Panipo
                 svUpperBar.IsPaneOpen = true;
                 txtBusqueda.Focus(FocusState.Programmatic);
             }
-            else {
-                //TODO Buscar Cosas y buscar dandole al Enter porque sino está el bug
-            }
-            
+             
         }
 
         private void CerrarBarraBusqueda_Focus(object sender, RoutedEventArgs e)
@@ -107,17 +115,22 @@ namespace Panipo
 
         private void CarritoCompra_Click(object sender, RoutedEventArgs e)
         {
+            MenuTitle.Text = "Mi Carrito";
             ContentFrame.Navigate(typeof(CarritoCompra));
         }
 
         private void IniciarSesion_Click(object sender, RoutedEventArgs e)
         {
+            MenuTitle.Text = "Iniciar Sesion";
             ContentFrame.Navigate(typeof(InicioSesion));
         }
 
         private void CerrarSesion_Click(object sender, RoutedEventArgs e)
         {
-            //TODO cerrar sesion
+            ContentFrame.Navigate(typeof(Inicio));
+            btnCerrarSesion.Visibility = Visibility.Collapsed;
+            btnIniciarSesion.Visibility = Visibility.Visible;
+            btnCarritoCompra.Visibility = Visibility.Collapsed;
         }
     }
 }
